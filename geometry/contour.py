@@ -1,14 +1,5 @@
 import math
 
-TOLERANCE = 0.001
-
-
-def points_equal(p1, p2):
-    return (
-        abs(p1[0] - p2[0]) < TOLERANCE and
-        abs(p1[1] - p2[1]) < TOLERANCE
-    )
-
 
 def contour_size(contour):
 
@@ -16,12 +7,18 @@ def contour_size(contour):
         return contour["radius"]
 
     elif contour["type"] == "arc":
-        return contour["radius"]
+
+        cx, cy = contour["center"]
+        sx, sy = contour["start"]
+
+        return math.hypot(sx - cx, sy - cy)
 
     elif contour["type"] == "polyline":
 
-        xs = [p[0] for p in contour["points"]]
-        ys = [p[1] for p in contour["points"]]
+        points = contour["points"]
+
+        xs = [p[0] for p in points]
+        ys = [p[1] for p in points]
 
         width = max(xs) - min(xs)
         height = max(ys) - min(ys)
@@ -34,70 +31,34 @@ def contour_size(contour):
 def build_contours(geometry):
 
     contours = []
-    lines = []
 
-    for g in geometry:
+    for entity in geometry:
 
-        if g["type"] == "line":
-            lines.append({
-                "start": g["start"],
-                "end": g["end"]
-            })
-
-        elif g["type"] == "circle":
+        if entity["type"] == "circle":
 
             contours.append({
                 "type": "circle",
-                "center": g["center"],
-                "radius": g["radius"]
+                "center": entity["center"],
+                "radius": entity["radius"]
             })
 
-        elif g["type"] == "arc":
+        elif entity["type"] == "arc":
 
             contours.append({
                 "type": "arc",
-                "center": g["center"],
-                "radius": g["radius"],
-                "start_angle": g["start_angle"],
-                "end_angle": g["end_angle"]
+                "center": entity["center"],
+                "start": entity["start"],
+                "end": entity["end"]
             })
 
-    # składanie linii w kontury
+        elif entity["type"] == "polyline":
 
-    while lines:
+            contours.append({
+                "type": "polyline",
+                "points": entity["points"]
+            })
 
-        current = lines.pop(0)
-        contour = [current["start"], current["end"]]
-
-        extended = True
-
-        while extended:
-
-            extended = False
-
-            for line in lines:
-
-                if points_equal(contour[-1], line["start"]):
-
-                    contour.append(line["end"])
-                    lines.remove(line)
-                    extended = True
-                    break
-
-                elif points_equal(contour[-1], line["end"]):
-
-                    contour.append(line["start"])
-                    lines.remove(line)
-                    extended = True
-                    break
-
-        contours.append({
-            "type": "polyline",
-            "points": contour
-        })
-
-    # SORTOWANIE KONTURÓW (najpierw małe)
-
+    # ---------- SORT LIKE TRUTOPS ----------
     contours.sort(key=contour_size)
 
     return contours
