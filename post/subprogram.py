@@ -1,71 +1,96 @@
 import math
 
 
+def format_xy(x, y):
+    return f"X{x:.3f} Y{y:.3f}"
+
+
+def generate_circle(contour):
+
+    cx, cy = contour["center"]
+    r = contour["radius"]
+
+    sx, sy = contour["start"]
+
+    direction = contour["direction"]
+
+    lines = []
+
+    # move to start
+    lines.append(f"G00 {format_xy(sx, sy)}")
+
+    # pierce
+    lines.append("TC_PIERCE")
+
+    # arc move
+    i = cx - sx
+    j = cy - sy
+
+    if direction == "CW":
+        g = "G2"
+    else:
+        g = "G3"
+
+    lines.append(f"{g} I{i:.3f} J{j:.3f}")
+
+    return lines
+
+
+def generate_line(contour):
+
+    x1, y1 = contour["start"]
+    x2, y2 = contour["end"]
+
+    lines = []
+
+    lines.append(f"G00 {format_xy(x1, y1)}")
+    lines.append("TC_PIERCE")
+    lines.append(f"G01 {format_xy(x2, y2)}")
+
+    return lines
+
+
+def generate_arc(contour):
+
+    sx, sy = contour["start"]
+    ex, ey = contour["end"]
+
+    cx, cy = contour["center"]
+
+    direction = contour["direction"]
+
+    i = cx - sx
+    j = cy - sy
+
+    if direction == "CW":
+        g = "G2"
+    else:
+        g = "G3"
+
+    lines = []
+
+    lines.append(f"G00 {format_xy(sx, sy)}")
+    lines.append("TC_PIERCE")
+    lines.append(f"{g} {format_xy(ex, ey)} I{i:.3f} J{j:.3f}")
+
+    return lines
+
+
 def generate_subprogram(contours):
 
     lines = []
-    n = 100
 
     for contour in contours:
 
-        # ---------- LEAD START ----------
-        if "lead_start" in contour:
-
-            x, y = contour["lead_start"]
-            lines.append(f"N{n} G00 X{round(x,3)} Y{round(y,3)}")
-            n += 10
-
-            lines.append(f"N{n} TC_PCS_PIERCE")
-            n += 10
-
-        # ---------- START POINT ----------
-        if "start" in contour:
-
-            x, y = contour["start"]
-            lines.append(f"N{n} G01 X{round(x,3)} Y{round(y,3)}")
-            n += 10
-
-        # ---------- CIRCLE ----------
         if contour["type"] == "circle":
+            lines += generate_circle(contour)
 
-            cx, cy = contour["center"]
-            r = contour["radius"]
+        elif contour["type"] == "line":
+            lines += generate_line(contour)
 
-            start_x = cx + r
-            start_y = cy
-
-            lines.append(
-                f"N{n} G03 I{round(cx-start_x,3)} J{round(cy-start_y,3)}"
-            )
-            n += 10
-
-        # ---------- POLYLINE ----------
-        elif contour["type"] == "polyline":
-
-            for x, y in contour["points"]:
-
-                lines.append(
-                    f"N{n} G01 X{round(x,3)} Y{round(y,3)}"
-                )
-                n += 10
-
-        # ---------- ARC ----------
         elif contour["type"] == "arc":
+            lines += generate_arc(contour)
 
-            cx, cy = contour["center"]
-            start = contour["start"]
-            end = contour["end"]
-
-            i = cx - start[0]
-            j = cy - start[1]
-
-            lines.append(
-                f"N{n} G03 X{round(end[0],3)} Y{round(end[1],3)} I{round(i,3)} J{round(j,3)}"
-            )
-            n += 10
-
-        # ---------- LASER OFF ----------
-        lines.append(f"N{n} TC_LASER_OFF(2)")
-        n += 10
+        lines.append("")
 
     return "\n".join(lines)
