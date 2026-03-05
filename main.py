@@ -61,11 +61,16 @@ def main():
     print("Bounding box:")
     print(bbox)
 
+    # placement
+    part_placements = generate_part_placements(
+        program_name,
+        bbox,
+        quantity
+    )
+
     # preview toolpath
     generate_preview(contours, bbox, "output/output_preview.png")
 
-    # placement
-    part_placements = generate_part_placements(program_name, bbox, quantity)
 
     # data programu
     date = datetime.now().strftime("%d.%m.%Y")
