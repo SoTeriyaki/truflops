@@ -309,3 +309,21 @@ MM,AT,1, 2630,1,1,,'ISO-Material Name' ,,,T
 MM,AT,1, 2640,1,1,,'Laser Type' ,,,T
 MM,AT,1, 2650,1,1,,'Filter FoilType' ,,,Z
 MM,AT,1, 2660,1,1,,'Filter Suitable For Coating' ,,,Z
+MM,AT,1, 2670,1,1,,'Filter Processing Technology 1' ,,,Z
+MM,AT,1, 2680,1,1,,'Filter Processing Technology 2' ,,,Z
+MM,AT,1, 2700,1,1,,'Cut Change Mode Large' ,,,Z
+MM,AT,1, 2710,1,1,,'Cut Change Mode Medium' ,,,Z
+MM,AT,1, 2720,1,1,,'Cut Change Mode Small' ,,,Z
+MM,AT,1, 2730,1,1,,'Cut Change Path Length Large' ,,'mm',Z
+MM,AT,1, 2740,1,1,,'Cut Change Path Length Medium' ,,'mm',Z
+MM,AT,1, 2750,1,1,,'Cut Change Path Length Small' ,,'mm',Z
+MM,AT,1, 2760,1,1,,'Cut Change Start Setting Value Large' ,,'mm',Z
+MM,AT,1, 2770,1,1,,'Cut Change Start Setting Value Medium' ,,'mm',Z
+MM,AT,1, 2780,1,1,,'Cut Change Start Setting Value Small' ,,'mm',Z
+MM,AT,1, 2790,1,1,,'EINST NOR QUERBLASEN' ,,'Bool',Z
+MM,AT,1, 2800,1,1,,'EINST SAN QUERBLASEN' ,,'Bool',Z
+MM,AT,1, 2850,1,1,,'SCHN-GR-R Fokuslage LI' ,,'mm',Z
+MM,AT,1, 2860,1,1,,'SCHN-GR-R Geschwindigkeit LI' ,,'m/min',Z
+MM,AT,1, 2870,1,1,,'SCHN-GR-R Duesenabstand LI' ,,'mm',Z
+MM,AT,1, 2880,1,1,,'SCHN-GR-R Gasdruck LI' ,,'bar',Z
+MM,AT,1, 2890,1,1,,'SCHN-MI-R Fokuslage LI' ,,'mm',Z
