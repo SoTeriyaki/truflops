@@ -88,3 +88,81 @@ DA,'SHT-1',3000.00,1500.00,{THICKNESS},1,3000.00,1500.00,'St37-40',7.850,0.0,
 C
 ENDE_SHEET_TECH
 ```
+C
+BEGIN_MACHINE_LOAD_DATA
+C
+ZA,MM,9
+MM,AT,1, 10,1,1,,'Load Name' ,,,T
+MM,AT,1, 50,1,1,,'Loading Type' ,,,Z
+MM,AT,1, 60,1,1,,'Calibration Active' ,,'Bool',Z
+MM,AT,1, 100,1,1,,'Pallet Changer Type' ,,,Z
+MM,AT,1, 110,1,1,,'Sheet Stop' ,,,Z
+MM,AT,1, 120,1,1,,'Measure Sheet Position' ,,,Z
+MM,AT,1, 130,1,1,,'Measuring Range X' ,,'mm',Z
+MM,AT,1, 140,1,1,,'Measuring Range Y' ,,'mm',Z
+MM,AT,1, 150,1,1,,'Measuring Corner' ,,,Z
+C
+ZA,DA,1
+DA,'SHL-1',1,1,1,1,0,50.00,50.00,1
+C
+ENDE_MACHINE_LOAD_DATA
+C
+BEGIN_LTT_STAMM
+C
+ZA,MM,247
+MM,AT,1, 10,1,1,,'Tabellenidentifikator' ,,,T
+MM,AT,1, 20,1,1,,'Bearbeiter' ,,,T
+MM,AT,1, 30,1,1,,'Erstellungsdatum' ,,,T
+MM,AT,1, 40,1,1,,'letzte Aenderung' ,,,T
+MM,AT,1, 50,1,1,,'Bemerkung' ,,,T
+MM,AT,1, 60,1,1,,'Einblendstatus' ,,,Z
+MM,AT,1, 70,1,1,,'Erstellungs-Einheit' ,,,Z
+MM,AT,1, 80,1,1,,'Maschinentyp' ,,,T
+MM,AT,1, 90,1,1,,'Lasernennleistung' ,,'W',Z
+MM,AT,1, 100,1,1,,'Material' ,,,T
+MM,AT,1, 110,1,1,,'Materialdicke' ,,'mm',Z
+MM,AT,1, 120,1,1,,'Linsenbrennweite' ,,'in',Z
+MM,AT,1, 130,1,1,,'Duesentyp Duesendurchmesser' ,,,T
+MM,AT,1, 140,1,1,,'Schneidkopfnummer' ,,,Z
+MM,AT,1, 150,1,1,,'Gasspuelen Schneiden-Einst' ,,'s',Z
+MM,AT,1, 160,1,1,,'Gasspuelen Einst-Schneiden' ,,'s',Z
+MM,AT,1, 170,1,1,,'SCHN Einstellmass' ,,'mm',Z
+MM,AT,1, 180,1,1,,'SCHN red. Beschleunigung' ,,'m/s2',Z
+MM,AT,1, 190,1,1,,'SCHN Beschleunigung' ,,'m/s2',Z
+MM,AT,1, 200,1,1,,'SCHN Eckenkuehlzeit' ,,'s',Z
+MM,AT,1, 210,1,1,,'SCHN V-Red AnschnittDickblech' ,,'%',Z
+MM,AT,1, 220,1,1,,'SCHN Gasart Schneiden' ,,,Z
+MM,AT,1, 230,1,1,,'SCHN Gasart red. Schneiden' ,,,Z
+MM,AT,1, 240,1,1,,'SCHN-GR Schnittspalt' ,,'mm',Z
+MM,AT,1, 250,1,1,,'SCHN-GR-N Laserleistung' ,,'W',Z
+MM,AT,1, 260,1,1,,'SCHN-GR-N Tastfrequenz' ,,'Hz',Z
+MM,AT,1, 270,1,1,,'SCHN-GR-N Geschwindigkeit' ,,'m/min',Z
+MM,AT,1, 280,1,1,,'SCHN-GR-N Duesenabstand' ,,'mm',Z
+MM,AT,1, 290,1,1,,'SCHN-GR-N Gasdruck' ,,'bar',Z
+MM,AT,1, 300,1,1,,'SCHN-GR-R Laserleistung' ,,'W',Z
+MM,AT,1, 310,1,1,,'SCHN-GR-R Tastfrequenz' ,,'Hz',Z
+MM,AT,1, 320,1,1,,'SCHN-GR-R Geschwindigkeit' ,,'m/min',Z
+MM,AT,1, 330,1,1,,'SCHN-GR-R Duesenabstand' ,,'mm',Z
+MM,AT,1, 340,1,1,,'SCHN-GR-R Gasdruck' ,,'bar',Z
+MM,AT,1, 350,1,1,,'SCHN-MI Schnittspalt' ,,'mm',Z
+MM,AT,1, 360,1,1,,'SCHN-MI-N Laserleistung' ,,'W',Z
+MM,AT,1, 370,1,1,,'SCHN-MI-N Tastfrequenz' ,,'Hz',Z
+MM,AT,1, 380,1,1,,'SCHN-MI-N Geschwindigkeit' ,,'m/min',Z
+MM,AT,1, 390,1,1,,'SCHN-MI-N Duesenabstand' ,,'mm',Z
+MM,AT,1, 400,1,1,,'SCHN-MI-N Gasdruck' ,,'bar',Z
+MM,AT,1, 410,1,1,,'SCHN-MI-R Laserleistung' ,,'W',Z
+MM,AT,1, 420,1,1,,'SCHN-MI-R Tastfrequenz' ,,'Hz',Z
+MM,AT,1, 430,1,1,,'SCHN-MI-R Geschwindigkeit' ,,'m/min',Z
+MM,AT,1, 440,1,1,,'SCHN-MI-R Duesenabstand' ,,'mm',Z
+MM,AT,1, 450,1,1,,'SCHN-MI-R Gasdruck' ,,'bar',Z
+MM,AT,1, 460,1,1,,'SCHN-KL Schnittspalt' ,,'mm',Z
+MM,AT,1, 470,1,1,,'SCHN-KL-N Laserleistung' ,,'W',Z
+MM,AT,1, 480,1,1,,'SCHN-KL-N Tastfrequenz' ,,'Hz',Z
+MM,AT,1, 490,1,1,,'SCHN-KL-N Geschwindigkeit' ,,'m/min',Z
+MM,AT,1, 500,1,1,,'SCHN-KL-N Duesenabstand' ,,'mm',Z
+MM,AT,1, 510,1,1,,'SCHN-KL-N Gasdruck' ,,'bar',Z
+MM,AT,1, 520,1,1,,'SCHN-KL-R Laserleistung' ,,'W',Z
+MM,AT,1, 530,1,1,,'SCHN-KL-R Tastfrequenz' ,,'Hz',Z
+MM,AT,1, 540,1,1,,'SCHN-KL-R Geschwindigkeit' ,,'m/min',Z
+MM,AT,1, 550,1,1,,'SCHN-KL-R Duesenabstand' ,,'mm',Z
+MM,AT,1, 560,1,1,,'SCHN-KL-R Gasdruck' ,,'bar',Z
