@@ -1,5 +1,5 @@
 import os
-from post.subprogram import generate_toolpath
+from post.subprogram import generate_subprogram
 
 
 def apply_markers(template, markers):
