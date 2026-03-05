@@ -70,8 +70,13 @@ def main():
         quantity
     )
 
-    # preview toolpath
-    generate_preview(contours, bbox, "output/output_preview.png")
+    # preview
+    generate_preview(
+        contours,
+        placements,
+        bbox,
+        "output/output_preview.png"
+    )
 
 
     # data programu
