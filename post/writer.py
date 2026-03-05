@@ -24,7 +24,9 @@ def generate_program(
         tech_data,
         date,
         contours,
-        part_positions
+        part_positions,
+        part_width,
+        part_height
     ):
 
     template_path = "templates/template.lst"
