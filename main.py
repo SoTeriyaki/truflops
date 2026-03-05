@@ -46,8 +46,9 @@ def main():
     thickness,
     tech_table,
     date,
-    contours
-    )   
+    geometry,
+    part_placements
+)
 
 
 if __name__ == "__main__":
