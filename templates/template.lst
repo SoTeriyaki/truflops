@@ -459,3 +459,19 @@ DA,1,'170260401_1','NOID_1',5.00,5.00,162.00,162.00,0.00,86.00,86.00,
   DA,2,'170260401_1','NOID_1',5.00,172.80,162.00,162.00,0.00,86.00,
 * 253.80,0,0,'','',1,'',1,0,-1,1
   C
+C
+ENDE_PARTS_IN_PROGRAM_POS
+C
+BEGIN_MICROJOINT
+C
+ZA,MM,12
+MM,AT,1, 10,1,1,,'Tabellenidentifikator' ,,'',T
+MM,AT,1, 100,1,1,,'programmierte Microjoints aktiv' ,,'Bool',Z
+MM,AT,1, 110,1,1,,'automatische Microjoints aktiv' ,,'Bool',Z
+MM,AT,1, 120,1,1,,'Micojointbreite kleine Kontur' ,,'mm',Z
+MM,AT,1, 130,1,1,,'Microjointbreite mittlere Kontur' ,,'mm',Z
+MM,AT,1, 140,1,1,,'Microjointbreite grosse Kontur' ,,'mm',Z
+MM,AT,1, 150,1,1,,'Konturausdehn. min X autom. MJ' ,,'mm',Z
+MM,AT,1, 160,1,1,,'Konturausdehn. max X autom. MJ' ,,'mm',Z
+MM,AT,1, 170,1,1,,'Konturausdehn. min Y autom. MJ' ,,'mm',Z
+MM,AT,1, 180,1,1,,'Konturausdehn. max Y autom. MJ' ,,'mm',Z
