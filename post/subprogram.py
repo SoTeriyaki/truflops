@@ -45,24 +45,24 @@ def generate_circle(contour):
 
     return lines
 
-    # move to start
-    lines.append(f"G00 {format_xy(sx, sy)}")
+# move to start
+lines.append(f"G00 {format_xy(sx, sy)}")
 
-    # pierce
-    lines.append("TC_PIERCE")
+# pierce
+lines.append("TC_PIERCE")
 
-    # arc move
-    i = cx - sx
-    j = cy - sy
+# arc move
+i = cx - sx
+j = cy - sy
 
-    if direction == "CW":
-        g = "G2"
-    else:
-        g = "G3"
+if direction == "CW":
+    g = "G2"
+else:
+    g = "G3"
 
-    lines.append(f"{g} I{i:.3f} J{j:.3f}")
+lines.append(f"{g} I{i:.3f} J{j:.3f}")
 
-    return lines
+return lines
 
 
 def generate_line(contour):
