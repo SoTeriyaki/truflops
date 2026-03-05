@@ -493,3 +493,21 @@ MM,AT,1, 40,1,1,,'PartTypeIndex' ,,'',Z
 MM,AT,1, 50,1,1,,'NozzleDiameter' ,,'mm',Z
 MM,AT,1, 60,1,1,,'GasPressure' ,,'bar',Z
 MM,AT,1, 70,1,1,,'LaserPower' ,,'W',Z
+C
+ZA,DA,5
+DA,1,2,0.19,1,1.70,5.0,0
+DA,1,2,36.46,1,1.70,15.0,0
+DA,2,0,0.56,1,0.00,0.0,1600
+DA,2,0,36.46,1,0.00,0.0,3200
+DA,3,0,0.19,1,0.00,0.0,0
+C
+ENDE_CONSUMPTION_TIMES
+C
+BEGIN_TOPS_DATA
+C
+ZA,MM,10
+MM,AT,1, 10,1,1,,'LfdNr' ,,'',Z
+MM,AT,1, 20,1,1,,'Typ' ,,'',T
+MM,AT,1, 30,1,1,,'Datensatzname' ,,'',Z
+MM,AT,1, 40,1,1,,'Datensatznr' ,,'',Z
+MM,AT,1, 50,1,1,,'Beschreibung' ,,'',T
