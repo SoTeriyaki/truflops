@@ -49,8 +49,11 @@ def generate_program(
     "TECH_NAME": tech_name,
     "TECH_DATA": tech_data,
     "TOOLPATH": generate_subprogram(contours),
-    "PART_POSITIONS": part_positions
-}
+    "PART_POSITIONS": part_positions,
+    "PART_WIDTH": f"{part_width:.3f}",
+    "PART_HEIGHT": f"{part_height:.3f}",
+    
+    }
 
     program = apply_markers(template, markers)
 
