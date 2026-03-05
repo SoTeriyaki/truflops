@@ -66,8 +66,8 @@ def generate_preview(contours, placements, bbox, output_path):
     required_h = part_h + 20
 
     ax.set_title(
-        f"Detal: {part_w:.1f} x {part_h:.1f} mm | "
-        f"Wymagany odpad: {part_w+20:.1f} x {part_h+20:.1f} mm"
+    f"Part size: {part_w:.1f} x {part_h:.1f} mm | "
+    f"Required scrap: {required_w:.1f} x {required_h:.1f} mm"
     )
 
     plt.gca().set_aspect("equal", adjustable="box")
