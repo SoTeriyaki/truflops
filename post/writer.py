@@ -27,16 +27,12 @@ def generate_program(program_name, thickness, tech_table, date, contours, part_p
         "PROGRAM_NAME": program_name,
         "THICKNESS": thickness,
         "DATE": date,
-
         "TECH_TABLE": tech_table,
-
         "PROGRAM_PATH": "",
         "HTML_PATH": "",
         "MATERIAL": "SC",
         "SHEET_NAME": "ST004000----3000x1500",
-
         "TOOLPATH": generate_subprogram(contours),
-
         "PART_POSITIONS": part_positions
     }
 
