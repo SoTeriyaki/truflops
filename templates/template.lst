@@ -19,3 +19,22 @@ MM,AT,1, 120,1,1,,'Speicherbedarf' ,,,Z
 MM,AT,1, 130,1,1,,'Material-ID' ,,,T
 MM,AT,1, 140,1,1,,'Tafelgewicht' ,,'kg',Z
 MM,AT,1, 150,1,1,,'Maschinenzeit' ,,'min',Z
+MM,AT,1, 160,1,1,,'Bemerkung' ,,,T
+MM,AT,1, 170,1,1,,'Flag Automatisiert' ,,'Bool',Z
+MM,AT,1, 180,1,1,,'Flag ToPsxxx-Programm' ,,'Bool',Z
+MM,AT,1, 190,1,1,,'Einrichteplanfilename' ,,,T
+MM,AT,1, 200,1,1,,'Lagergutbezeichnung' ,,,T
+MM,AT,1, 210,1,1,,'Palettierungsflag' ,,'Bool',Z
+MM,AT,1, 220,1,1,,'Palettierungmodus' ,,,Z
+MM,AT,1, 230,1,1,,'Palette putzen' ,,'Bool',Z
+MM,AT,1, 240,1,1,,'Sauger putzen' ,,'Bool',Z
+MM,AT,1, 250,1,1,,'SystemPalletType' ,,,T
+MM,AT,1, 260,1,1,,'Bearbeitungszeit PierceLine' ,,'min',Z
+MM,AT,1, 270,1,1,,'Schneidlänge' ,,'mm',Z
+MM,AT,1, 280,1,1,,'viewer name machine' ,,,T
+MM,AT,1, 350,1,1,,'ProgrammingSystemSignature' ,,,T
+C
+ZA,DA,1
+DA,L20,,,'Sin 840D',1,'Trumpf','170260401_1','User','17.02.2026'
+
+* '170260401_1',1,'X:\TRUMPF\2D\Blacha #4\170260401\170260401_1.LST'
