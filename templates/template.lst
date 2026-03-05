@@ -566,3 +566,25 @@ DA,32,'INTERNAL_DATA',311,1,,'T','','','',0
   DA,39,'INTERNAL_DATA',450,1,,'T','','','',0
 * 'Kontury zaplanowane z korekcją toru','','',0
   DA,40,'INTERNAL_DATA',590,1,,'T','','Nie ustalone','',0
+DA,39,'INTERNAL_DATA',450,1,,'T','','','',0
+
+* 'Kontury zaplanowane z korekcją toru','','',0
+  DA,40,'INTERNAL_DATA',590,1,,'T','','Nie ustalone','',0
+  C
+  ENDE_TOPS_DATA
+  C
+  BEGIN_PROGRAMM
+  C
+  ZA,MM,7
+  MM,AT,1,10,1,1,,'Programmnummer' ,,'',T
+  MM,AT,1,20,1,1,,'Programmtyp' ,,'',T
+  MM,AT,1,30,1,1,,'Bemerkung' ,,'',T
+  MM,AT,1,40,1,1,,'Bearbeitungszeit' ,,'min',Z
+  MM,AT,1,50,1,1,,'Dateityp' ,,'',T
+  MM,AT,1,60,1,1,,'IncreasingRecordNumberFlag' ,,'Bool',Z
+  MM,AT,1,70,1,1,,'PartTypeIndex' ,,'',Z
+  C
+  ZA,DA,2
+  DA,'SP1170260401_1','UP','',0.63,'LST',1,0
+  START_TEXT
+  N10 DFF REAL AF :AF=ACTUAL FEED
