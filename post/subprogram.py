@@ -11,22 +11,24 @@ def generate_circle(contour):
     r = contour["radius"]
 
     sx, sy = contour["start"]
+    lx, ly = contour["lead_start"]
 
     direction = contour["direction"]
 
-    # punkt po przeciwnej stronie koła
     ex = cx - (sx - cx)
     ey = cy - (sy - cy)
 
     lines = []
 
-    # szybki najazd
-    lines.append(f"G00 X{sx:.3f} Y{sy:.3f}")
+    # najazd nad detal
+    lines.append(f"G00 X{lx:.3f} Y{ly:.3f}")
 
     # przebicie
     lines.append("TC_PIERCE")
 
-    # wektory środka
+    # lead-in
+    lines.append(f"G01 X{sx:.3f} Y{sy:.3f}")
+
     i1 = cx - sx
     j1 = cy - sy
 
