@@ -2,7 +2,7 @@ SAFE_OFFSET_X = 0
 SAFE_OFFSET_Y = 10
 
 
-def generate_part_placements(program_name, bbox, quantity)
+def generate_part_placements(program_name, bbox):
 
     x = SAFE_OFFSET_X
     y = SAFE_OFFSET_Y
