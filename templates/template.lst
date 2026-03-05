@@ -201,3 +201,21 @@ MM,AT,1, 920,1,1,,'KOER-G Gasart' ,,,Z
 MM,AT,1, 930,1,1,,'KOER-G Gasdruck' ,,'bar',Z
 MM,AT,1, 940,1,1,,'KOER-P Einstechzeit' ,,'s',Z
 MM,AT,1, 950,1,1,,'KOER-P Rampenzyklusnummer' ,,,Z
+MM,AT,1, 960,1,1,,'KOER-P Duesenabstand' ,,'mm',Z
+MM,AT,1, 970,1,1,,'KOER-P Gasart' ,,,Z
+MM,AT,1, 980,1,1,,'KOER-P Gasdruck' ,,'bar',Z
+MM,AT,1, 990,1,1,,'PUNK Einstellmass' ,,'mm',Z
+MM,AT,1, 1000,1,1,,'PUNK-S Zeit' ,,'s',Z
+MM,AT,1, 1010,1,1,,'PUNK-S Rampenzyklusnummer' ,,,Z
+MM,AT,1, 1020,1,1,,'PUNK-S Duesenabstand' ,,'mm',Z
+MM,AT,1, 1030,1,1,,'PUNK-S Gasart' ,,,Z
+MM,AT,1, 1040,1,1,,'PUNK-S Gasdruck' ,,'bar',Z
+MM,AT,1, 1050,1,1,,'PUNK-F Zeit' ,,'s',Z
+MM,AT,1, 1060,1,1,,'PUNK-F Rampenzyklusnummer' ,,,Z
+MM,AT,1, 1070,1,1,,'PUNK-F Duesenabstand' ,,'mm',Z
+MM,AT,1, 1080,1,1,,'PUNK-F Gasart' ,,,Z
+MM,AT,1, 1090,1,1,,'PUNK-F Gasdruck' ,,'bar',Z
+MM,AT,1, 1100,1,1,,'TRUMPF-Kennung' ,,,Z
+MM,AT,1, 1110,1,1,,'Vorschub anf. aus Stanzloch' ,,,Z
+MM,AT,1, 1120,1,1,,'SCHN-GR Einstellmass' ,,'mm',Z
+MM,AT,1, 1130,1,1,,'SCHN-MI Einstellmass' ,,'mm',Z
