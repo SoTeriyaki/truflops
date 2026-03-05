@@ -79,7 +79,7 @@ MM,AT,1, 380,1,1,,'AdvancedEvaporateCircleRadius' ,,'mm',Z
 MM,AT,1, 390,1,1,,'Surface Optical Reflection Property' ,,,Z
 C
 ZA,DA,1
-DA,'SHT-1',3000.00,1500.00,{THICKNESS},1,3000.00,1500.00,'{MATERIAL_ISO}',7.850,0.0,
+DA,'SHT-1',3000.00,1500.00,{THICKNESS},1,3000.00,1500.00,'{MATERIAL_ISO}',{DENSITY},0.0,
 
 * '{MATERIAL_ISO}',0,0.00,2
 C
