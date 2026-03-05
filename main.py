@@ -67,7 +67,7 @@ def main():
         program_name,
         thickness,
         tech_table,
-        date,
+        date = datetime.now().strftime("%d.%m.%Y")
         contours,
         part_placements
     )
