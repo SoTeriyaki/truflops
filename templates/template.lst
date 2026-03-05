@@ -382,3 +382,21 @@ DA,'ST045MDO-N2SO-30-2','TW516ks','29.05.08','','
   BEGIN_LTT_CALLS
   C
   ZA,MM,1
+MM,AT,1, 10,1,1,,'Tabellenidentifikator' ,,'',T
+C
+ZA,DA,1
+DA,,'ST045MDO-N2SO-30-2'
+C
+ENDE_LTT_CALLS
+C
+BEGIN_PARTS_IN_PROGRAM
+C
+ZA,MM,23
+MM,AT,1, 10,1,1,,'Hauptprogrammname' ,,'',T
+MM,AT,1, 20,1,1,,'reserviert' ,,'',T
+MM,AT,1, 30,1,1,,'Teil-Identnummer' ,,'',T
+MM,AT,1, 40,1,1,,'reserviert' ,,'',T
+MM,AT,1, 50,1,1,,'Geometriefilename' ,,'',Z
+MM,AT,1, 60,1,1,,'Anzahl' ,,'',T
+MM,AT,1, 70,1,1,,'Geometriefilename [einf.Darst]' ,,'',T
+MM,AT,1, 80,1,1,,'Bearbeitungszeit' ,,'min',Z
