@@ -32,7 +32,8 @@ def main():
     program_name = os.path.splitext(os.path.basename(dxf_path))[0]
 
     # tabela technologiczna
-    tech_table = get_tech_table(material, thickness)
+    tech_name = get_tech_name(material, thickness)
+    tech_data = load_technology(tech_name)
 
     # parsowanie DXF
     geometry = parse_dxf(dxf_path)
