@@ -32,12 +32,12 @@ def main():
 
     # generowanie programu
     generate_program(
-        program_name,
-        thickness,
-        tech_table,
-        date,
-        geometry
-    )
+    program_name,
+    thickness,
+    tech_table,
+    date,
+    contours
+    )   
 
 
 if __name__ == "__main__":
