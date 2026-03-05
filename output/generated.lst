@@ -56,7 +56,7 @@ MM,AT,1, 130,1,1,,'LabelEncodingTypes' ,,,Z
 MM,AT,1, 140,1,1,,'CodeSignature' ,,,T
 C
 ZA,DA,1
-DA,0,3,0,'{TECH_TABLE}',0,'CodeSignature_NONE'
+DA,0,3,0,'SS020MDO-N2SO-30-2',0,'CodeSignature_NONE'
 C
 ENDE_PROGRAM_PROPERTIES
 C
@@ -453,22 +453,6 @@ G90
 X30.000 Y30.000
 L SP1test
 
-G90
-X30.000 Y90.000
-L SP1test
-
-G90
-X30.000 Y150.000
-L SP1test
-
-G90
-X30.000 Y210.000
-L SP1test
-
-G90
-X30.000 Y270.000
-L SP1test
-
 C
 C
 ENDE_PARTS_IN_PROGRAM_POS
@@ -545,7 +529,7 @@ DA,13,'INTERNAL_DATA',102,1,,'T','','','',0
 DA,14,'INTERNAL_DATA',101,1,,'T','','0 : 01 : 15 [h:min:s]','',0
 DA,15,'INTERNAL_DATA',280,1,,'Z','mm','1958','',0
 DA,16,'INTERNAL_DATA',650,1,,'T','','TruLaser 3030 (L20)','',0
-* 'X:\TRUMPF\2D\Blacha #4\170260401\170260401_1.taf','','',0
+* 'XXX','','',0
 DA,18,'INTERNAL_DATA',550,1,,'T','','Bez','',0
 DA,19,'INTERNAL_DATA',600,1,,'T','','BMP','',0
 DA,20,'INTERNAL_DATA',610,1,,'T','','BMP','',0
@@ -654,22 +638,6 @@ G00 X30 Y30
 ; ===== PART PLACEMENTS START =====
 G90
 X30.000 Y30.000
-L SP1test
-
-G90
-X30.000 Y90.000
-L SP1test
-
-G90
-X30.000 Y150.000
-L SP1test
-
-G90
-X30.000 Y210.000
-L SP1test
-
-G90
-X30.000 Y270.000
 L SP1test
 
 ; ===== PART PLACEMENTS END =====
