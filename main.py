@@ -12,6 +12,7 @@ from geometry.placement import generate_part_placements
 from geometry.kerf import apply_kerf
 from geometry.direction import detect_direction
 from nest.placement import generate_part_placements
+from nest.grid import generate_grid_nest
 
 import os
 from datetime import datetime
