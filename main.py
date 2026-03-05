@@ -1,5 +1,6 @@
 from config.technology import get_tech_table
 from geometry import bbox
+from geometry.align import align_to_origin
 from geometry.cut_order import apply_cut_order
 from post.writer import generate_program
 from dxf.parser import parse_dxf
@@ -28,6 +29,9 @@ def main():
 
     # parsowanie DXF
     geometry = parse_dxf(dxf_path)
+
+    # AUTO ALIGN
+    geometry = align_to_origin(geometry)
 
     print("Wczytana geometria:")
     print(geometry)
