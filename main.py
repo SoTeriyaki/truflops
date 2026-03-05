@@ -1,4 +1,5 @@
 from config.technology import get_tech_table
+from geometry import bbox
 from post.writer import generate_program
 from dxf.parser import parse_dxf
 from geometry.contour import build_contours
@@ -23,16 +24,16 @@ def main():
 
     # parsowanie DXF
     geometry = parse_dxf(dxf_path)
-    generate_preview(
-    geometry,
-    "output/output_preview.png"
-    )
+    generate_preview(geometry,"output/output_preview.png")
     print("Wczytana geometria:")
     print(geometry)
     contours = build_contours(geometry)
     contours = apply_leads(contours)
     print("Contours:")
     print(contours)
+    bbox = compute_bbox(geometry)
+    print("Bounding box:")
+    print(bbox)
         
     # data
     date = datetime.now().strftime("%d.%m.%Y")
