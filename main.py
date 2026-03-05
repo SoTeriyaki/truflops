@@ -61,7 +61,7 @@ def main():
     print("Bounding box:")
     print(bbox)
 
-    # placement
+    # grid nest
     part_placements = generate_part_placements(
         program_name,
         bbox,
