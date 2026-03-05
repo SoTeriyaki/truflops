@@ -38,3 +38,21 @@ ZA,DA,1
 DA,L20,,,'Sin 840D',1,'Trumpf','170260401_1','User','17.02.2026'
 
 * '170260401_1',1,'X:\TRUMPF\2D\Blacha #4\170260401\170260401_1.LST'
+* 1642,'St37-45',141.30,1.28,1,0,1,
+* 'X:\TRUMPF\2D\Blacha #4\170260401\170260401_1.HTML',
+* 'ST000400----3000x1500',0,1,1,1,'',1.26,1958.00,
+* 'TruLaser 3030 (L20)','TruTops Laser V17.04.00 B97 0.0.0.0'
+  C
+  ENDE_EINRICHTEPLAN_INFO
+  C
+  BEGIN_PROGRAM_PROPERTIES
+  C
+  ZA,MM,6
+  MM,AT,1, 10,1,1,,'Sync Data Change Pierce To Cut' ,,,Z
+  MM,AT,1, 20,1,1,,'ProgramType' ,,,Z
+  MM,AT,1, 80,1,1,,'FluidSprayMode' ,,,Z
+  MM,AT,1, 120,1,1,,'MarkingLaserTechnologyName' ,,,T
+  MM,AT,1, 130,1,1,,'LabelEncodingTypes' ,,,Z
+  MM,AT,1, 140,1,1,,'CodeSignature' ,,,T
+  C
+  ZA,DA,1
