@@ -129,3 +129,21 @@ MM,AT,1, 200,1,1,,'SCHN Eckenkuehlzeit' ,,'s',Z
 MM,AT,1, 210,1,1,,'SCHN V-Red AnschnittDickblech' ,,'%',Z
 MM,AT,1, 220,1,1,,'SCHN Gasart Schneiden' ,,,Z
 MM,AT,1, 230,1,1,,'SCHN Gasart red. Schneiden' ,,,Z
+MM,AT,1, 240,1,1,,'SCHN-GR Schnittspalt' ,,'mm',Z
+MM,AT,1, 250,1,1,,'SCHN-GR-N Laserleistung' ,,'W',Z
+MM,AT,1, 260,1,1,,'SCHN-GR-N Tastfrequenz' ,,'Hz',Z
+MM,AT,1, 270,1,1,,'SCHN-GR-N Geschwindigkeit' ,,'m/min',Z
+MM,AT,1, 280,1,1,,'SCHN-GR-N Duesenabstand' ,,'mm',Z
+MM,AT,1, 290,1,1,,'SCHN-GR-N Gasdruck' ,,'bar',Z
+MM,AT,1, 300,1,1,,'SCHN-GR-R Laserleistung' ,,'W',Z
+MM,AT,1, 310,1,1,,'SCHN-GR-R Tastfrequenz' ,,'Hz',Z
+MM,AT,1, 320,1,1,,'SCHN-GR-R Geschwindigkeit' ,,'m/min',Z
+MM,AT,1, 330,1,1,,'SCHN-GR-R Duesenabstand' ,,'mm',Z
+MM,AT,1, 340,1,1,,'SCHN-GR-R Gasdruck' ,,'bar',Z
+MM,AT,1, 350,1,1,,'SCHN-MI Schnittspalt' ,,'mm',Z
+MM,AT,1, 360,1,1,,'SCHN-MI-N Laserleistung' ,,'W',Z
+MM,AT,1, 370,1,1,,'SCHN-MI-N Tastfrequenz' ,,'Hz',Z
+MM,AT,1, 380,1,1,,'SCHN-MI-N Geschwindigkeit' ,,'m/min',Z
+MM,AT,1, 390,1,1,,'SCHN-MI-N Duesenabstand' ,,'mm',Z
+MM,AT,1, 400,1,1,,'SCHN-MI-N Gasdruck' ,,'bar',Z
+MM,AT,1, 410,1,1,,'SCHN-MI-R Laserleistung' ,,'W',Z
