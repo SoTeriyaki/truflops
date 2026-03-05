@@ -1,6 +1,5 @@
 import math
 
-
 TOLERANCE = 0.001
 
 
@@ -13,17 +12,36 @@ def points_equal(p1, p2):
 
 def build_contours(geometry):
 
+    contours = []
     lines = []
 
     for g in geometry:
+
         if g["type"] == "line":
             lines.append({
                 "start": g["start"],
                 "end": g["end"]
             })
 
-    contours = []
+        elif g["type"] == "circle":
 
+            contours.append({
+                "type": "circle",
+                "center": g["center"],
+                "radius": g["radius"]
+            })
+
+        elif g["type"] == "arc":
+
+            contours.append({
+                "type": "arc",
+                "center": g["center"],
+                "radius": g["radius"],
+                "start_angle": g["start_angle"],
+                "end_angle": g["end_angle"]
+            })
+
+    # składanie linii w kontury
     while lines:
 
         current = lines.pop(0)
@@ -51,6 +69,9 @@ def build_contours(geometry):
                     extended = True
                     break
 
-        contours.append(contour)
+        contours.append({
+            "type": "polyline",
+            "points": contour
+        })
 
     return contours
