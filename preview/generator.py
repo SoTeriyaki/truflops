@@ -58,6 +58,27 @@ def generate_preview(contours, placements, bbox, output_path):
 
                 ax.add_patch(arc)
 
+    def compute_nest_bbox(placements, bbox):
+
+    part_w = bbox["width"]
+    part_h = bbox["height"]
+
+    max_x = 0
+    max_y = 0
+
+    for p in placements:
+
+        x = p["x"] + part_w
+        y = p["y"] + part_h
+
+        if x > max_x:
+            max_x = x
+
+        if y > max_y:
+            max_y = y
+
+    return max_x, max_y
+
     # bounding box detalu
     part_w = bbox["width"]
     part_h = bbox["height"]
