@@ -16,8 +16,7 @@ TECH_TABLE = {
 
 
     # CZARNA
-    ("SN",1.5): "SS015MD0-N2SO-30-2",
-    ("SN",2): "SS020MD0-N2SO-30-2"
+    ("SN",1): "",
 
 }
 
