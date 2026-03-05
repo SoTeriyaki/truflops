@@ -93,3 +93,21 @@ DA,'SHT-1',3000.00,1500.00,4.50,1,3000.00,1500.00,'St37-40',7.850,0.0,
   MM,AT,1, 60,1,1,,'Calibration Active' ,,'Bool',Z
   MM,AT,1, 100,1,1,,'Pallet Changer Type' ,,,Z
   MM,AT,1, 110,1,1,,'Sheet Stop' ,,,Z
+MM,AT,1, 120,1,1,,'Measure Sheet Position' ,,,Z
+MM,AT,1, 130,1,1,,'Measuring Range X' ,,'mm',Z
+MM,AT,1, 140,1,1,,'Measuring Range Y' ,,'mm',Z
+MM,AT,1, 150,1,1,,'Measuring Corner' ,,,Z
+C
+ZA,DA,1
+DA,'SHL-1',1,1,1,1,0,50.00,50.00,1
+C
+ENDE_MACHINE_LOAD_DATA
+C
+BEGIN_LTT_STAMM
+C
+ZA,MM,247
+MM,AT,1, 10,1,1,,'Tabellenidentifikator' ,,,T
+MM,AT,1, 20,1,1,,'Bearbeiter' ,,,T
+MM,AT,1, 30,1,1,,'Erstellungsdatum' ,,,T
+MM,AT,1, 40,1,1,,'letzte Aenderung' ,,,T
+MM,AT,1, 50,1,1,,'Bemerkung' ,,,T
