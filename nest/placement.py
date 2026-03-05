@@ -1,27 +1,31 @@
-from nest.grid import generate_grid_nest
-
-
 def generate_part_placements(program_name, bbox, quantity):
 
-    placements = generate_grid_nest(bbox, quantity)
+    start_x = 30
+    start_y = 30
+
+    margin = 20
+
+    step_x = bbox["width"] + margin
+    step_y = bbox["height"] + margin
+
+    sheet_x = 3000
+    sheet_y = 1500
+
+    cols = int(sheet_y // step_y)
 
     lines = []
 
-    i = 1
+    for i in range(quantity):
 
-    part_w = bbox["width"]
-    part_h = bbox["height"]
+        row = i // cols
+        col = i % cols
 
-    for p in placements:
+        x = start_x + row * step_x
+        y = start_y + col * step_y
 
-        line = (
-            f"DA,{i},'{program_name}','LO',"
-            f"{p['x']:.3f},{p['y']:.3f},"
-            f"{part_w:.3f},{part_h:.3f},0"
-        )
-
-        lines.append(line)
-
-        i += 1
+        lines.append(f"G90")
+        lines.append(f"X{x:.3f} Y{y:.3f}")
+        lines.append(f"L SP1{program_name}")
+        lines.append("")
 
     return "\n".join(lines)
