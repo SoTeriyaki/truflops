@@ -425,3 +425,82 @@ DA,,'{PROGRAM_NAME}','LO','NOTD',1,0
 C
 ZA,DA,1
 DA,,'{PROGRAM_NAME}','LO','NOID',1,0,
+* 'X:\Sylwester\skrawmet\uszczelnienie Tuleja dławicy podkładka.GEO',
+* 2,'uszczelnienie Tuleja dławicy podkładka',0.62,4098.99,'','1','',
+* 162.000,162.000,1,81.000,81.000,0.62,979.00,1,0,0.00,1
+  C
+  ENDE_PARTS_IN_PROGRAM
+  C
+  BEGIN_PARTS_IN_PROGRAM_POS
+  C
+  ZA,MM,20
+  MM,AT,1, 10,1,1,,'laufende Nummer gefertigtes Teil' ,,'',Z
+  MM,AT,1, 20,1,1,,'Hauptprogrammname' ,,'',T
+  MM,AT,1, 30,1,1,,'Teil-Identnummer' ,,'',T
+  MM,AT,1, 60,1,1,,'Position X-Koordinate' ,,'mm',Z
+  MM,AT,1, 70,1,1,,'Position Y-Koordinate' ,,'mm',Z
+  MM,AT,1, 80,1,1,,'Abmessung in X' ,,'mm',Z
+  MM,AT,1, 90,1,1,,'Abmessung in Y' ,,'mm',Z
+  MM,AT,1, 100,1,1,,'Winkellage' ,,'deg',Z
+  MM,AT,1, 150,1,1,,'X-Koordinate Schwerpunkt' ,,'mm',Z
+  MM,AT,1, 160,1,1,,'Y-Koordinate Schwerpunkt' ,,'mm',Z
+  MM,AT,1, 190,1,1,,'Entnahmenummer' ,,'',Z
+  MM,AT,1, 200,1,1,,'Referenzteil' ,,'',Z
+  MM,AT,1, 210,1,1,,'Name der PartUnloadData-Tabelle' ,,'',T
+  MM,AT,1, 220,1,1,,'Name der PartPalettData-Tabelle' ,,'',T
+  MM,AT,1, 240,1,1,,'Klassifizierung' ,,'',Z
+  MM,AT,1, 250,1,1,,'reserviert' ,,'',T
+  MM,AT,1, 320,1,1,,'Part Type Index' ,,'',Z
+  MM,AT,1, 330,1,1,,'Mirrored At Y' ,,'Bool',Z
+  MM,AT,1, 360,1,1,,'LabelGroupID' ,,'',Z
+  MM,AT,1, 500,1,1,,'TRUMPF-Kennung' ,,'',Z
+C
+ZA,DA,2
+DA,1,'{PROGRAM_NAME}','NOID_1',5.00,5.00,162.00,162.00,0.00,86.00,86.00,
+* 0,0,'','',1,'',1,0,-1,1
+DA,2,'{PROGRAM_NAME}','NOID_1',5.00,172.80,162.00,162.00,0.00,86.00,
+* 253.80,0,0,'','',1,'',1,0,-1,1
+C
+C
+ENDE_PARTS_IN_PROGRAM_POS
+C
+BEGIN_MICROJOINT
+C
+ZA,MM,12
+MM,AT,1, 10,1,1,,'Tabellenidentifikator' ,,'',T
+MM,AT,1, 100,1,1,,'programmierte Microjoints aktiv' ,,'Bool',Z
+MM,AT,1, 110,1,1,,'automatische Microjoints aktiv' ,,'Bool',Z
+MM,AT,1, 120,1,1,,'Micojointbreite kleine Kontur' ,,'mm',Z
+MM,AT,1, 130,1,1,,'Microjointbreite mittlere Kontur' ,,'mm',Z
+MM,AT,1, 140,1,1,,'Microjointbreite grosse Kontur' ,,'mm',Z
+MM,AT,1, 150,1,1,,'Konturausdehn. min X autom. MJ' ,,'mm',Z
+MM,AT,1, 160,1,1,,'Konturausdehn. max X autom. MJ' ,,'mm',Z
+MM,AT,1, 170,1,1,,'Konturausdehn. min Y autom. MJ' ,,'mm',Z
+MM,AT,1, 180,1,1,,'Konturausdehn. max Y autom. MJ' ,,'mm',Z
+MM,AT,1, 190,1,1,,'Einstechart nach Microjoint' ,,'',Z
+MM,AT,1, 500,1,1,,'TRUMPF-Kennung' ,,'',Z
+C
+ZA,DA,1
+DA,,'MIJO-1',0,0,0.50,0.50,0.50,-1.00,-1.00,-1.00,-1.00,11,1
+C
+ENDE_MICROJOINT
+C
+BEGIN_CONSUMPTION_TIMES
+C
+ZA,MM,7
+MM,AT,1, 10,1,1,,'ConsumptionGroup' ,,'',Z
+MM,AT,1, 20,1,1,,'GasType' ,,'',Z
+MM,AT,1, 30,1,1,,'OnTime' ,,'s',Z
+MM,AT,1, 40,1,1,,'PartTypeIndex' ,,'',Z
+MM,AT,1, 50,1,1,,'NozzleDiameter' ,,'mm',Z
+MM,AT,1, 60,1,1,,'GasPressure' ,,'bar',Z
+MM,AT,1, 70,1,1,,'LaserPower' ,,'W',Z
+C
+ZA,DA,5
+DA,1,2,0.19,1,1.70,5.0,0
+DA,1,2,36.46,1,1.70,15.0,0
+DA,2,0,0.56,1,0.00,0.0,1600
+DA,2,0,36.46,1,0.00,0.0,3200
+DA,3,0,0.19,1,0.00,0.0,0
+C
+ENDE_CONSUMPTION_TIMES
