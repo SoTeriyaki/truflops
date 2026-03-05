@@ -35,7 +35,7 @@ def generate_program(program_name, thickness, tech_table, date, contours, part_p
         "MATERIAL": "SC",
         "SHEET_NAME": "ST004000----3000x1500",
 
-        "TOOLPATH": generate_toolpath(contours),
+        "TOOLPATH": generate_subprogram(contours),
 
         "PART_POSITIONS": part_positions
     }
