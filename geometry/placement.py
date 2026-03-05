@@ -1,7 +1,11 @@
+SAFE_OFFSET_X = 0
+SAFE_OFFSET_Y = 10
+
+
 def generate_part_placements(program_name, bbox):
 
-    x = 0
-    y = 0
+    x = SAFE_OFFSET_X
+    y = SAFE_OFFSET_Y
 
     lines = []
 
