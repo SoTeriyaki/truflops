@@ -1,102 +1,82 @@
-import matplotlib
 import matplotlib.pyplot as plt
-import matplotlib.patches as patches
+import math
 
 
-SHEET_X = 3000
-SHEET_Y = 1500
-SAFE_MARGIN = 20
+def draw_circle(ax, cx, cy, r, color="black"):
+    circle = plt.Circle((cx, cy), r, fill=False, color=color)
+    ax.add_patch(circle)
 
 
-def compute_bounds(geometry):
+def draw_lead(ax, start, lead_start):
 
-    xs = []
-    ys = []
+    x1, y1 = lead_start
+    x2, y2 = start
 
-    for g in geometry:
-
-        if g["type"] == "circle":
-
-            cx, cy = g["center"]
-            r = g["radius"]
-
-            xs.extend([cx - r, cx + r])
-            ys.extend([cy - r, cy + r])
-
-        elif g["type"] == "polyline":
-
-            for x, y in g["points"]:
-                xs.append(x)
-                ys.append(y)
-
-        elif g["type"] == "arc":
-
-            xs.append(g["start"][0])
-            ys.append(g["start"][1])
-
-            xs.append(g["end"][0])
-            ys.append(g["end"][1])
-
-    min_x = min(xs)
-    max_x = max(xs)
-    min_y = min(ys)
-    max_y = max(ys)
-
-    width = max_x - min_x
-    height = max_y - min_y
-
-    return width, height
+    ax.plot([x1, x2], [y1, y2], color="green")
 
 
-def generate_preview(geometry, output_path):
+def draw_pierce(ax, point):
 
-    width, height = compute_bounds(geometry)
+    x, y = point
 
-    waste_x = width + SAFE_MARGIN
-    waste_y = height + SAFE_MARGIN
+    ax.plot(x, y, marker="o", color="red")
 
-    fig, ax = plt.subplots(figsize=(12, 6))
 
-    ax.set_xlim(0, SHEET_X)
-    ax.set_ylim(0, SHEET_Y)
+def generate_preview(contours, bbox, output_path):
+
+    fig, ax = plt.subplots(figsize=(10, 5))
+
+    # arkusz
+    sheet_x = 3000
+    sheet_y = 1500
+
+    ax.set_xlim(0, sheet_x)
+    ax.set_ylim(0, sheet_y)
+
+    # podziałka
+    ax.set_xticks(range(0, sheet_x + 1, 200))
+    ax.set_yticks(range(0, sheet_y + 1, 100))
+
+    ax.grid(True)
+
+    # rysowanie konturów
+    for c in contours:
+
+        if c["type"] == "circle":
+
+            cx, cy = c["center"]
+            r = c["radius"]
+
+            draw_circle(ax, cx, cy, r)
+
+            if "lead_start" in c:
+
+                draw_lead(ax, c["start"], c["lead_start"])
+                draw_pierce(ax, c["lead_start"])
+
+    # bounding box
+    min_x = bbox["min_x"]
+    max_x = bbox["max_x"]
+    min_y = bbox["min_y"]
+    max_y = bbox["max_y"]
+
+    rect_x = [min_x, max_x, max_x, min_x, min_x]
+    rect_y = [min_y, min_y, max_y, max_y, min_y]
+
+    ax.plot(rect_x, rect_y, linestyle="--", color="blue")
+
+    # opis
+    width = bbox["width"]
+    height = bbox["height"]
+
+    scrap_x = width + 20
+    scrap_y = height + 20
+
+    ax.set_title(
+        f"Part size: {width:.1f} x {height:.1f} mm | Required scrap: {scrap_x:.1f} x {scrap_y:.1f} mm"
+    )
 
     ax.set_aspect("equal")
 
-    ax.set_title(
-        f"Detal: {round(width)} x {round(height)} mm / Wymagany odpad: {round(waste_x)} x {round(waste_y)} mm"
-    )
-
-    # ---------- DRAW GEOMETRY ----------
-
-    for g in geometry:
-
-        if g["type"] == "circle":
-
-            cx, cy = g["center"]
-            r = g["radius"]
-
-            circle = patches.Circle((cx, cy), r, fill=False)
-
-            ax.add_patch(circle)
-
-        elif g["type"] == "polyline":
-
-            xs = [p[0] for p in g["points"]]
-            ys = [p[1] for p in g["points"]]
-
-            ax.plot(xs, ys)
-
-        elif g["type"] == "arc":
-
-            x1, y1 = g["start"]
-            x2, y2 = g["end"]
-
-            ax.plot([x1, x2], [y1, y2])
-
-    ax.set_facecolor("#f0f0f0")
-
-    ax.set_xticks(range(0, 3001, 200))
-    ax.set_yticks(range(0, 1501, 100))
-
-    plt.savefig(output_path, dpi=150)
+    plt.savefig(output_path, dpi=200)
     plt.close()
