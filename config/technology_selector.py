@@ -9,6 +9,7 @@ TECH_TABLE = {
     ("SN",2): "SS020MDO-N2SO-30-2",
     ("SN",3): "SS030MDO-N2SO-30-2",
     ("SN",4): "SS040MDO-N2SO-30-2",
+    ("SN",5): "SS050MDO-N2SO-30-2",
 
 
     # CZARNA
