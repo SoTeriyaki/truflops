@@ -11,6 +11,7 @@ from geometry.bbox import compute_bbox
 from geometry.kerf import apply_kerf
 from geometry.direction import detect_direction
 from nest.placement import generate_part_placements
+from nest.placement_writer import write_part_positions
 from nest.grid import generate_grid_nest
 from config.materials import MATERIALS
 from config.technology_selector import get_tech_name
