@@ -1,8 +1,10 @@
 SHEET_WIDTH = 3000
 SHEET_HEIGHT = 1500
 
-SCRAP = 20
-SPACING = 5
+SCRAP = 30
+
+SPACING_X = 10
+SPACING_Y = 10
 
 
 def generate_grid_nest(bbox, quantity):
@@ -10,8 +12,8 @@ def generate_grid_nest(bbox, quantity):
     part_w = bbox["width"]
     part_h = bbox["height"]
 
-    pitch_x = part_w + SPACING
-    pitch_y = part_h + SPACING
+    pitch_x = part_w + SPACING_X
+    pitch_y = part_h + SPACING_Y
 
     usable_w = SHEET_WIDTH - SCRAP
     usable_h = SHEET_HEIGHT - SCRAP
@@ -22,10 +24,8 @@ def generate_grid_nest(bbox, quantity):
     placements = []
     count = 0
 
-    # NAJPIERW kolumna (X)
     for c in range(cols):
 
-        # potem w górę (Y)
         for r in range(rows):
 
             if count >= quantity:
