@@ -1,4 +1,5 @@
 import ezdxf
+import tempfile
 
 
 def parse_dxf(file_path):
