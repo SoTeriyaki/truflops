@@ -365,7 +365,7 @@ ENDE_LTT_STAMM
 MM,AT,1, 10,1,1,,'Tabellenidentifikator' ,,'',T
 C
 ZA,DA,1
-DA,,'{TECH_TABLE}'
+DA,,'{TECH_NAME}'
 C
 ENDE_LTT_CALLS
 C
