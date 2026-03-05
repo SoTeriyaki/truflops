@@ -12,6 +12,9 @@ from geometry.kerf import apply_kerf
 from geometry.direction import detect_direction
 from nest.placement import generate_part_placements
 from nest.grid import generate_grid_nest
+from config.materials import MATERIALS
+from config.technology_selector import get_tech_name
+from config.technology_loader import load_technology
 
 import os
 from datetime import datetime
