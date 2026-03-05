@@ -5,6 +5,9 @@ def format_xy(x, y):
     return f"X{x:.3f} Y{y:.3f}"
 
 
+from post.pierce import generate_pierce_cycle
+
+
 def generate_circle(contour):
 
     cx, cy = contour["center"]
@@ -20,13 +23,13 @@ def generate_circle(contour):
 
     lines = []
 
-    # najazd nad detal
+    # szybki najazd
     lines.append(f"G00 X{lx:.3f} Y{ly:.3f}")
 
-    # przebicie
-    lines.append("TC_PIERCE")
+    # pierce cycle (TruTops style)
+    lines += generate_pierce_cycle()
 
-    # lead-in
+    # lead
     lines.append(f"G01 X{sx:.3f} Y{sy:.3f}")
 
     i1 = cx - sx
@@ -35,15 +38,9 @@ def generate_circle(contour):
     i2 = cx - ex
     j2 = cy - ey
 
-    if direction == "CW":
-        g = "G2"
-    else:
-        g = "G3"
+    g = "G2" if direction == "CW" else "G3"
 
-    # pierwszy półokrąg
     lines.append(f"{g} X{ex:.3f} Y{ey:.3f} I{i1:.3f} J{j1:.3f}")
-
-    # drugi półokrąg
     lines.append(f"{g} X{sx:.3f} Y{sy:.3f} I{i2:.3f} J{j2:.3f}")
 
     return lines
