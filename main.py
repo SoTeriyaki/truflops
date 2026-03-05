@@ -24,6 +24,11 @@ def main():
     print("Wczytana geometria:")
     print(geometry)
 
+        
+
+
+
+
     # data
     date = datetime.now().strftime("%d.%m.%Y")
 
