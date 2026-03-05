@@ -29,7 +29,7 @@ def generate_program(program_name, thickness, tech_table, date, geometry):
         "THICKNESS": thickness,
         "DATE": date,
         "TECH_TABLE": tech_table,
-        "TOOLPATH": "",
+        "TOOLPATH": generate_toolpath(geometry),
         "PART_PLACEMENTS": ""
     }
 
