@@ -96,7 +96,7 @@ def main():
         material,
         material_iso,
         density,
-        tech_name,
+        tech_table,
         tech_data,
         date,
         contours,
