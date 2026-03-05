@@ -6,7 +6,8 @@ TECH_TABLE = {
     # NIERDZEWKA
     ("SN",1): "SS010MDO-N2SO-30-2",
     ("SN",1.5): "SS015MDO-N2SO-30-2",
-    ()
+    ("SN",2): "SS020MDO-N2SO-30-2",
+    ("SN",3): "SS030MDO-N2SO-30-2",
 
 
     # CZARNA
