@@ -22,7 +22,10 @@ def main():
 
     # parsowanie DXF
     geometry = parse_dxf(dxf_path)
-
+    generate_preview(
+    geometry,
+    "output/output_preview.png"
+    )
     print("Wczytana geometria:")
     print(geometry)
     contours = build_contours(geometry)
