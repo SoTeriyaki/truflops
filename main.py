@@ -21,6 +21,7 @@ def main():
     dxf_path = input("Sciezka do DXF: ").strip().strip('"')
     material = input("Material (SC/SN/OC/AL): ").upper()
     thickness = float(input("Grubosc blachy: "))
+    quantity = int(input("Liczba detali: "))
 
     program_name = os.path.splitext(os.path.basename(dxf_path))[0]
 
