@@ -72,7 +72,7 @@ def main():
 
     # grid nest
     placements = generate_grid_nest(bbox, quantity)
-    part_positions = write_part_positions(part_placements)
+    part_positions = write_part_positions(placements)
 
     # preview
     generate_preview(
