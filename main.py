@@ -2,6 +2,7 @@ from config.technology import get_tech_table
 from post.writer import generate_program
 from dxf.parser import parse_dxf
 from geometry.contour import build_contours
+from geometry.lead import apply_leads
 
 import os
 from datetime import datetime
