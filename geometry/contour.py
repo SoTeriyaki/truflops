@@ -10,6 +10,27 @@ def points_equal(p1, p2):
     )
 
 
+def contour_size(contour):
+
+    if contour["type"] == "circle":
+        return contour["radius"]
+
+    elif contour["type"] == "arc":
+        return contour["radius"]
+
+    elif contour["type"] == "polyline":
+
+        xs = [p[0] for p in contour["points"]]
+        ys = [p[1] for p in contour["points"]]
+
+        width = max(xs) - min(xs)
+        height = max(ys) - min(ys)
+
+        return max(width, height)
+
+    return 0
+
+
 def build_contours(geometry):
 
     contours = []
@@ -42,6 +63,7 @@ def build_contours(geometry):
             })
 
     # składanie linii w kontury
+
     while lines:
 
         current = lines.pop(0)
@@ -73,5 +95,9 @@ def build_contours(geometry):
             "type": "polyline",
             "points": contour
         })
+
+    # SORTOWANIE KONTURÓW (najpierw małe)
+
+    contours.sort(key=contour_size)
 
     return contours
