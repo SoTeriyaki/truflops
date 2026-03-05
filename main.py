@@ -23,12 +23,10 @@ def main():
 
     print("Wczytana geometria:")
     print(geometry)
-
+    contours = build_contours(geometry)
+    print("Contours:")
+    print(contours)
         
-
-
-
-
     # data
     date = datetime.now().strftime("%d.%m.%Y")
 
