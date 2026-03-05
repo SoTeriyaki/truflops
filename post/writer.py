@@ -14,7 +14,18 @@ def apply_markers(template, markers):
     return template
 
 
-def generate_program(program_name, thickness, tech_table, date, contours, part_positions):
+def generate_program(
+        program_name,
+        thickness,
+        material,
+        material_iso,
+        density,
+        tech_name,
+        tech_data,
+        date,
+        contours,
+        part_positions
+    ):
 
     template_path = "templates/template.lst"
     output_path = "output/generated.lst"
