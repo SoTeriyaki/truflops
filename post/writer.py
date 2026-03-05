@@ -55,6 +55,8 @@ def generate_program(
     "PART_POSITIONS": part_positions,
     "PART_WIDTH": f"{part_width:.3f}",
     "PART_HEIGHT": f"{part_height:.3f}",
+    "PART_CENTER_X": f"{part_center_x:.3f}",
+    "PART_CENTER_Y": f"{part_center_y:.3f}",
 
     }
 
