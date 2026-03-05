@@ -67,7 +67,7 @@ def main():
         program_name,
         thickness,
         tech_table,
-        datetime.now(),
+        date,
         contours,
         part_placements
     )
