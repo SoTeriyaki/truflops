@@ -1,42 +1,32 @@
 import math
 
 
-def generate_toolpath(contours):
+def generate_subprogram(contours):
 
     lines = []
-    n = 60
+    n = 100
 
     for contour in contours:
 
-        # =================
-        # POLYLINE
-        # =================
+        # ---------- LEAD START ----------
+        if "lead_start" in contour:
 
-        if contour["type"] == "polyline":
-
-            points = contour["points"]
-            start = points[0]
-
-            lines.append(f"N{n} X{start[0]:.3f} Y{start[1]:.3f}")
+            x, y = contour["lead_start"]
+            lines.append(f"N{n} G00 X{round(x,3)} Y{round(y,3)}")
             n += 10
 
-            lines.append(f"N{n} TC_LASER_ON(1)")
+            lines.append(f"N{n} TC_PCS_PIERCE")
             n += 10
 
-            for p in points[1:]:
+        # ---------- START POINT ----------
+        if "start" in contour:
 
-                lines.append(f"N{n} G01 X{p[0]:.3f} Y{p[1]:.3f}")
-                n += 10
-
-            lines.append(f"N{n} TC_LASER_OFF(2)")
+            x, y = contour["start"]
+            lines.append(f"N{n} G01 X{round(x,3)} Y{round(y,3)}")
             n += 10
 
-
-        # =================
-        # CIRCLE
-        # =================
-
-        elif contour["type"] == "circle":
+        # ---------- CIRCLE ----------
+        if contour["type"] == "circle":
 
             cx, cy = contour["center"]
             r = contour["radius"]
@@ -44,51 +34,38 @@ def generate_toolpath(contours):
             start_x = cx + r
             start_y = cy
 
-            lines.append(f"N{n} X{start_x:.3f} Y{start_y:.3f}")
-            n += 10
-
-            lines.append(f"N{n} TC_LASER_ON(1)")
-            n += 10
-
             lines.append(
-                f"N{n} G02 X{start_x:.3f} Y{start_y:.3f} I{-r:.3f} J0.000"
+                f"N{n} G03 I{round(cx-start_x,3)} J{round(cy-start_y,3)}"
             )
             n += 10
 
-            lines.append(f"N{n} TC_LASER_OFF(2)")
-            n += 10
+        # ---------- POLYLINE ----------
+        elif contour["type"] == "polyline":
 
+            for x, y in contour["points"]:
 
-        # =================
-        # ARC
-        # =================
+                lines.append(
+                    f"N{n} G01 X{round(x,3)} Y{round(y,3)}"
+                )
+                n += 10
 
+        # ---------- ARC ----------
         elif contour["type"] == "arc":
 
             cx, cy = contour["center"]
-            r = contour["radius"]
+            start = contour["start"]
+            end = contour["end"]
 
-            start_angle = math.radians(contour["start_angle"])
-            end_angle = math.radians(contour["end_angle"])
-
-            start_x = cx + r * math.cos(start_angle)
-            start_y = cy + r * math.sin(start_angle)
-
-            end_x = cx + r * math.cos(end_angle)
-            end_y = cy + r * math.sin(end_angle)
-
-            lines.append(f"N{n} X{start_x:.3f} Y{start_y:.3f}")
-            n += 10
-
-            lines.append(f"N{n} TC_LASER_ON(1)")
-            n += 10
+            i = cx - start[0]
+            j = cy - start[1]
 
             lines.append(
-                f"N{n} G02 X{end_x:.3f} Y{end_y:.3f} I{cx-start_x:.3f} J{cy-start_y:.3f}"
+                f"N{n} G03 X{round(end[0],3)} Y{round(end[1],3)} I{round(i,3)} J{round(j,3)}"
             )
             n += 10
 
-            lines.append(f"N{n} TC_LASER_OFF(2)")
-            n += 10
+        # ---------- LASER OFF ----------
+        lines.append(f"N{n} TC_LASER_OFF(2)")
+        n += 10
 
     return "\n".join(lines)
