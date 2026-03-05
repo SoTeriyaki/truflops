@@ -21,7 +21,7 @@ def print_logo():
 
 def print_instructions():
 
-    print("TRUFLOPS — TruLaser LST Generator\n")
+    print("TRUFLOPS v0.1 | DXF → LST | TruLaser 3030\n")
 
     print("Instrukcja:")
     print("1. Podaj ścieżkę do pliku DXF")
