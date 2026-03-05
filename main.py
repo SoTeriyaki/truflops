@@ -14,6 +14,7 @@ from nest.grid import generate_grid_nest
 from config.materials import MATERIALS
 from config.technology_selector import get_tech_name
 from config.technology_loader import load_technology
+from ui.cli import show_cli
 
 import os
 from datetime import datetime
