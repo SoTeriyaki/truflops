@@ -1,3 +1,17 @@
+import pathlib
+
+TECH_FOLDER = pathlib.Path("config/technology")
+
+
+def get_tech_table(material, thickness):
+    table = TECH_TABLES[material][thickness]
+    return table
+
+
+def load_tech_data(table_name):
+    path = TECH_FOLDER / f"{table_name}.lst"
+    return path.read_text()
+
 TECH_TABLES = {
 
     "SC": {  # stal czarna
