@@ -21,7 +21,8 @@ from datetime import datetime
 
 
 def main():
-
+    
+    show_cli()
     dxf_path = input("Sciezka do DXF: ").strip().strip('"')
     material = input("Material (SC/SN/OC/AL): ").upper()
     thickness = float(input("Grubosc blachy: "))
