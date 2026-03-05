@@ -95,5 +95,8 @@ def generate_preview(geometry, output_path):
 
     ax.set_facecolor("#f0f0f0")
 
+    ax.set_xticks(range(0, 3001, 200))
+    ax.set_yticks(range(0, 1501, 100))
+
     plt.savefig(output_path, dpi=150)
     plt.close()
