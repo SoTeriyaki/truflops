@@ -296,3 +296,70 @@ MM,AT,1, 2400,1,1,,'Frequenz bei unterer Grenze Kennz.' ,,'Hz',Z
 MM,AT,1, 2410,1,1,,'Frequenz bei unterer Grenze Abda.' ,,'Hz',Z
 MM,AT,1, 2420,1,1,,'SCHN normale Beschleun. 2. Y-Achse' ,,'m/s2',Z
 MM,AT,1, 2430,1,1,,'SCHN normale Beschleun. 2. X-Achse' ,,'m/s2',Z
+MM,AT,1, 2500,1,1,,'PulsePower Regulation' ,,'W',Z
+MM,AT,1, 2510,1,1,,'Approachmode Large Contour' ,,,Z
+MM,AT,1, 2520,1,1,,'Approachmode Medium Contour' ,,,Z
+MM,AT,1, 2530,1,1,,'Approachmode Small Contour' ,,,Z
+MM,AT,1, 2540,1,1,,'PierceLine-N Einstellmass vollsyn.' ,,'mm',Z
+MM,AT,1, 2550,1,1,,'PierceLine-N Zeit vollsyn.' ,,'s',Z
+MM,AT,1, 2560,1,1,,'PierceLine-N Gasdruck vollsyn.' ,,'bar',Z
+MM,AT,1, 2570,1,1,,'PierceLine-R Einstellmass vollsyn.' ,,'mm',Z
+MM,AT,1, 2580,1,1,,'PierceLine-R Zeit vollsyn.' ,,'s',Z
+MM,AT,1, 2590,1,1,,'PierceLine-R Gasdruck vollsyn.' ,,'bar',Z
+MM,AT,1, 2600,1,1,,'Base Name' ,,,T
+MM,AT,1, 2610,1,1,,'Dimension Machine Min.' ,,'mm',Z
+MM,AT,1, 2620,1,1,,'Dimension Machine Max.' ,,'mm',Z
+MM,AT,1, 2630,1,1,,'ISO-Material Name' ,,,T
+MM,AT,1, 2640,1,1,,'Laser Type' ,,,T
+MM,AT,1, 2650,1,1,,'Filter FoilType' ,,,Z
+MM,AT,1, 2660,1,1,,'Filter Suitable For Coating' ,,,Z
+MM,AT,1, 2670,1,1,,'Filter Processing Technology 1' ,,,Z
+MM,AT,1, 2680,1,1,,'Filter Processing Technology 2' ,,,Z
+MM,AT,1, 2700,1,1,,'Cut Change Mode Large' ,,,Z
+MM,AT,1, 2710,1,1,,'Cut Change Mode Medium' ,,,Z
+MM,AT,1, 2720,1,1,,'Cut Change Mode Small' ,,,Z
+MM,AT,1, 2730,1,1,,'Cut Change Path Length Large' ,,'mm',Z
+MM,AT,1, 2740,1,1,,'Cut Change Path Length Medium' ,,'mm',Z
+MM,AT,1, 2750,1,1,,'Cut Change Path Length Small' ,,'mm',Z
+MM,AT,1, 2760,1,1,,'Cut Change Start Setting Value Large' ,,'mm',Z
+MM,AT,1, 2770,1,1,,'Cut Change Start Setting Value Medium' ,,'mm',Z
+MM,AT,1, 2780,1,1,,'Cut Change Start Setting Value Small' ,,'mm',Z
+MM,AT,1, 2790,1,1,,'EINST NOR QUERBLASEN' ,,'Bool',Z
+MM,AT,1, 2800,1,1,,'EINST SAN QUERBLASEN' ,,'Bool',Z
+MM,AT,1, 2850,1,1,,'SCHN-GR-R Fokuslage LI' ,,'mm',Z
+MM,AT,1, 2860,1,1,,'SCHN-GR-R Geschwindigkeit LI' ,,'m/min',Z
+MM,AT,1, 2870,1,1,,'SCHN-GR-R Duesenabstand LI' ,,'mm',Z
+MM,AT,1, 2880,1,1,,'SCHN-GR-R Gasdruck LI' ,,'bar',Z
+MM,AT,1, 2890,1,1,,'SCHN-MI-R Fokuslage LI' ,,'mm',Z
+MM,AT,1, 2900,1,1,,'SCHN-MI-R Geschwindigkeit LI' ,,'m/min',Z
+MM,AT,1, 2910,1,1,,'SCHN-MI-R Duesenabstand LI' ,,'mm',Z
+MM,AT,1, 2920,1,1,,'SCHN-MI-R Gasdruck LI' ,,'bar',Z
+MM,AT,1, 2930,1,1,,'SCHN-KL-R Fokuslage LI' ,,'mm',Z
+MM,AT,1, 2940,1,1,,'SCHN-KL-R Geschwindigkeit LI' ,,'m/min',Z
+MM,AT,1, 2950,1,1,,'SCHN-KL-R Duesenabstand LI' ,,'mm',Z
+MM,AT,1, 2960,1,1,,'SCHN-KL-R Gasdruck LI' ,,'bar',Z
+MM,AT,1, 3060,1,1,,'EINS-R Querblasdruck' ,,'bar',Z
+MM,AT,1, 3070,1,1,,'EINS-N Querblasdruck' ,,'bar',Z
+MM,AT,1, 3080,1,1,,'PierceLine-R Querblasdruck' ,,'bar',Z
+MM,AT,1, 3090,1,1,,'PierceLine-N Querblasdruck' ,,'bar',Z
+MM,AT,1, 3610,1,1,,'SCH_GR_NOR_GESCHW_MIN' ,,'m/min',Z
+MM,AT,1, 3620,1,1,,'TargetTechnology' ,,,Z
+MM,AT,1, 3630,1,1,,'CuttingHeadQuantity' ,,,Z
+MM,AT,1, 3650,1,1,,'FocusShiftShortestBeamPath' ,,'mm',Z
+MM,AT,1, 3660,1,1,,'FocusShiftLongestBeamPath' ,,'mm',Z
+MM,AT,1, 4150,1,1,,'LT2_DMC_LSTG' ,,'W',Z
+MM,AT,1, 4160,1,1,,'LT2_DMC_TASTFR' ,,'Hz',Z
+MM,AT,1, 4170,1,1,,'LT2_DMC_PULSEPOWER' ,,'W',Z
+MM,AT,1, 4180,1,1,,'LT2_DMC_GESCHW' ,,'m/min',Z
+MM,AT,1, 4190,1,1,,'LT2_DMC_DUESENABST' ,,'mm',Z
+MM,AT,1, 4200,1,1,,'LT2_DMC_GASDRUCK' ,,'bar',Z
+MM,AT,1, 4210,1,1,,'LT2_DMC_GASART' ,,,Z
+MM,AT,1, 4220,1,1,,'LT2_DMC_FOKUSLAGE' ,,'mm',Z
+MM,AT,1, 4230,1,1,,'LT2_DMC_STRAHL_DM' ,,'mm',Z
+MM,AT,1, 4240,1,1,,'LT2_DMC_FOKUS_DM' ,,'um',Z
+C
+ZA,DA,1
+DA,'{TECH_TABLE}','TW516ks','29.05.08','','
+
+* 'St37 4.5mm 3200x2500mm N2 HD TC23 Standard',1,0,'TC23',3200,
+* 'St37-45',{THICKNESS},9.80,'EA417',3,6.00,1.00,-2.50,2.000,6.000,0.00,0.0,
