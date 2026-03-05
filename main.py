@@ -71,8 +71,7 @@ def main():
 
     # grid nest
     placements = generate_grid_nest(bbox, quantity)
-    part_placements = generate_part_placements(
-        program_name,
+    part_placements = generate_grid_nest(
         bbox,
         quantity
     )
