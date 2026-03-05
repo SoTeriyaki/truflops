@@ -74,3 +74,22 @@ MM,AT,1, 240,1,1,,'Materialkennung' ,,,T
 MM,AT,1, 260,1,1,,'Werkstoffdichte' ,,'kg/dm3',Z
 MM,AT,1, 280,1,1,,'Dynamikstufe' ,,,Z
 MM,AT,1, 290,1,1,,'Werkstoffkennung' ,,,T
+MM,AT,1, 370,1,1,,'AdvancedEvaporateSwitch' ,,,Z
+MM,AT,1, 380,1,1,,'AdvancedEvaporateCircleRadius' ,,'mm',Z
+MM,AT,1, 390,1,1,,'Surface Optical Reflection Property' ,,,Z
+C
+ZA,DA,1
+DA,'SHT-1',3000.00,1500.00,4.50,1,3000.00,1500.00,'St37-40',7.850,0.0,
+
+* '1.0038',0,0.00,2
+  C
+  ENDE_SHEET_TECH
+  C
+  BEGIN_MACHINE_LOAD_DATA
+  C
+  ZA,MM,9
+  MM,AT,1, 10,1,1,,'Load Name' ,,,T
+  MM,AT,1, 50,1,1,,'Loading Type' ,,,Z
+  MM,AT,1, 60,1,1,,'Calibration Active' ,,'Bool',Z
+  MM,AT,1, 100,1,1,,'Pallet Changer Type' ,,,Z
+  MM,AT,1, 110,1,1,,'Sheet Stop' ,,,Z
