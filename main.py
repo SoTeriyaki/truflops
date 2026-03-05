@@ -1,5 +1,6 @@
 from config.technology import get_tech_table
 from geometry import bbox
+from geometry.cut_order import apply_cut_order
 from post.writer import generate_program
 from dxf.parser import parse_dxf
 from geometry.contour import build_contours
@@ -34,6 +35,9 @@ def main():
 
     # budowa konturów
     contours = build_contours(geometry)
+
+    # kolejność cięcia
+    contours = apply_cut_order(contours)
 
     # kompensacja kerf
     contours = apply_kerf(contours)
