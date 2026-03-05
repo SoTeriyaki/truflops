@@ -77,7 +77,7 @@ def generate_preview(contours, placements, bbox, output_path):
         if y > max_y:
             max_y = y
 
-    return max_x, max_y
+        return max_x, max_y
 
     # bounding box detalu
     part_w = bbox["width"]
