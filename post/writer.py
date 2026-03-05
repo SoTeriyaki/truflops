@@ -35,6 +35,9 @@ def generate_program(
     with open(template_path, "r", encoding="utf-8") as f:
         template = f.read()
 
+    part_center_x = part_width / 2
+    part_center_y = part_height / 2
+
     markers = {
 
     "PROGRAM_NAME": program_name,
@@ -52,7 +55,7 @@ def generate_program(
     "PART_POSITIONS": part_positions,
     "PART_WIDTH": f"{part_width:.3f}",
     "PART_HEIGHT": f"{part_height:.3f}",
-    
+
     }
 
     program = apply_markers(template, markers)
