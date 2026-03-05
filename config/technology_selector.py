@@ -16,7 +16,7 @@ TECH_TABLE = {
 
 
     # CZARNA
-    ("SN",1): "",
+    ("SC",1): "",
 
 }
 
