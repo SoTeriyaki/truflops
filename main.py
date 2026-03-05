@@ -93,8 +93,9 @@ def main():
     generate_program(
         program_name,
         thickness,
-        
-        tech_table,
+        material,
+        material_iso,
+        density,
         date,
         contours,
         part_placements
