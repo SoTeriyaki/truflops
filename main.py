@@ -1,4 +1,3 @@
-from config.technology import get_tech_table
 from geometry import bbox
 from geometry.align import align_to_origin
 from geometry.cut_order import apply_cut_order
