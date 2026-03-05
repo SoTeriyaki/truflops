@@ -25,6 +25,7 @@ def main():
     print("Wczytana geometria:")
     print(geometry)
     contours = build_contours(geometry)
+    contours = apply_leads(contours)
     print("Contours:")
     print(contours)
         
