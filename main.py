@@ -75,6 +75,7 @@ def main():
         bbox,
         quantity
     )
+    part_positions = write_part_positions(part_placements)
 
     # preview
     generate_preview(
