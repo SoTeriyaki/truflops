@@ -1,6 +1,8 @@
 import matplotlib.pyplot as plt
 from matplotlib.patches import Circle, Arc
 
+from geometry import bbox
+
 
 SHEET_WIDTH = 3000
 SHEET_HEIGHT = 1500
@@ -59,6 +61,9 @@ def generate_preview(contours, placements, bbox, output_path):
     # bounding box detalu
     part_w = bbox["width"]
     part_h = bbox["height"]
+
+    required_w = part_w + 20
+    required_h = part_h + 20
 
     ax.set_title(
         f"Detal: {part_w:.1f} x {part_h:.1f} mm | "
