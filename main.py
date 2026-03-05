@@ -40,6 +40,9 @@ def main():
     # kolejność cięcia
     contours = apply_cut_order(contours)
 
+    # wykrycie kierunku
+    contours = detect_direction(contours)
+
     # kompensacja kerf
     contours = apply_kerf(contours)
 
