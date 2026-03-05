@@ -96,9 +96,11 @@ def main():
         material,
         material_iso,
         density,
+        tech_name,
+        tech_data,
         date,
         contours,
-        part_placements
+        part_positions
     )
 
 
