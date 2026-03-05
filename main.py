@@ -26,7 +26,9 @@ def main():
     material = input("Material (SC/SN/OC/AL): ").upper()
     thickness = float(input("Grubosc blachy: "))
     quantity = int(input("Liczba detali: "))
-
+    material_data = MATERIALS[material]
+    material_iso = material_data["iso"]
+    density = material_data["density"]
     program_name = os.path.splitext(os.path.basename(dxf_path))[0]
 
     # tabela technologiczna
