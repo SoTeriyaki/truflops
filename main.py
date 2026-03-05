@@ -103,7 +103,9 @@ def main():
         tech_data,
         date,
         contours,
-        part_positions
+        part_positions,
+        part_width,
+        part_height
     )
 
 
