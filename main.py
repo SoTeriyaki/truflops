@@ -11,6 +11,7 @@ from geometry.bbox import compute_bbox
 from geometry.placement import generate_part_placements
 from geometry.kerf import apply_kerf
 from geometry.direction import detect_direction
+from nest.placement import generate_part_placements
 
 import os
 from datetime import datetime
