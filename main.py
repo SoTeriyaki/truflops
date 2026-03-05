@@ -66,7 +66,7 @@ def main():
     thickness,
     tech_table,
     date,
-    geometry,
+    contours,
     part_placements
 )
 
