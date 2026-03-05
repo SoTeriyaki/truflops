@@ -14,7 +14,37 @@ def generate_circle(contour):
 
     direction = contour["direction"]
 
+    # punkt po przeciwnej stronie koła
+    ex = cx - (sx - cx)
+    ey = cy - (sy - cy)
+
     lines = []
+
+    # szybki najazd
+    lines.append(f"G00 X{sx:.3f} Y{sy:.3f}")
+
+    # przebicie
+    lines.append("TC_PIERCE")
+
+    # wektory środka
+    i1 = cx - sx
+    j1 = cy - sy
+
+    i2 = cx - ex
+    j2 = cy - ey
+
+    if direction == "CW":
+        g = "G2"
+    else:
+        g = "G3"
+
+    # pierwszy półokrąg
+    lines.append(f"{g} X{ex:.3f} Y{ey:.3f} I{i1:.3f} J{j1:.3f}")
+
+    # drugi półokrąg
+    lines.append(f"{g} X{sx:.3f} Y{sy:.3f} I{i2:.3f} J{j2:.3f}")
+
+    return lines
 
     # move to start
     lines.append(f"G00 {format_xy(sx, sy)}")
