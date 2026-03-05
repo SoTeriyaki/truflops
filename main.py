@@ -66,6 +66,8 @@ def main():
 
     # bounding box
     bbox = compute_bbox(geometry)
+    part_width = bbox["width"]
+    part_height = bbox["height"]
 
     print("Bounding box:")
     print(bbox)
