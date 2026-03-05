@@ -291,3 +291,21 @@ MM,AT,1, 2390,1,1,,'Leistung bei unterer Grenze Abda.' ,,'W',Z
 MM,AT,1, 2400,1,1,,'Frequenz bei unterer Grenze Kennz.' ,,'Hz',Z
 MM,AT,1, 2410,1,1,,'Frequenz bei unterer Grenze Abda.' ,,'Hz',Z
 MM,AT,1, 2420,1,1,,'SCHN normale Beschleun. 2. Y-Achse' ,,'m/s2',Z
+MM,AT,1, 2430,1,1,,'SCHN normale Beschleun. 2. X-Achse' ,,'m/s2',Z
+MM,AT,1, 2500,1,1,,'PulsePower Regulation' ,,'W',Z
+MM,AT,1, 2510,1,1,,'Approachmode Large Contour' ,,,Z
+MM,AT,1, 2520,1,1,,'Approachmode Medium Contour' ,,,Z
+MM,AT,1, 2530,1,1,,'Approachmode Small Contour' ,,,Z
+MM,AT,1, 2540,1,1,,'PierceLine-N Einstellmass vollsyn.' ,,'mm',Z
+MM,AT,1, 2550,1,1,,'PierceLine-N Zeit vollsyn.' ,,'s',Z
+MM,AT,1, 2560,1,1,,'PierceLine-N Gasdruck vollsyn.' ,,'bar',Z
+MM,AT,1, 2570,1,1,,'PierceLine-R Einstellmass vollsyn.' ,,'mm',Z
+MM,AT,1, 2580,1,1,,'PierceLine-R Zeit vollsyn.' ,,'s',Z
+MM,AT,1, 2590,1,1,,'PierceLine-R Gasdruck vollsyn.' ,,'bar',Z
+MM,AT,1, 2600,1,1,,'Base Name' ,,,T
+MM,AT,1, 2610,1,1,,'Dimension Machine Min.' ,,'mm',Z
+MM,AT,1, 2620,1,1,,'Dimension Machine Max.' ,,'mm',Z
+MM,AT,1, 2630,1,1,,'ISO-Material Name' ,,,T
+MM,AT,1, 2640,1,1,,'Laser Type' ,,,T
+MM,AT,1, 2650,1,1,,'Filter FoilType' ,,,Z
+MM,AT,1, 2660,1,1,,'Filter Suitable For Coating' ,,,Z
