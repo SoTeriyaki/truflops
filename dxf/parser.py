@@ -5,6 +5,22 @@ import tempfile
 def parse_dxf(file_path):
 
     doc = ezdxf.readfile(file_path)
+
+    # konwersja do R12
+    r12_doc = ezdxf.new("R12")
+    r12_msp = r12_doc.modelspace()
+
+    for e in doc.modelspace():
+        try:
+            r12_msp.add_entity(e.copy())
+        except:
+            pass
+
+    # zapis tymczasowy
+    temp_file = tempfile.NamedTemporaryFile(delete=False, suffix=".dxf")
+    r12_doc.saveas(temp_file.name)
+
+    doc = ezdxf.readfile(temp_file.name)
     msp = doc.modelspace()
 
     geometry = []
@@ -22,18 +38,15 @@ def parse_dxf(file_path):
                 "end": (end.x, end.y)
             })
 
-
         elif entity.dxftype() == "CIRCLE":
 
             center = entity.dxf.center
-            radius = entity.dxf.radius
 
             geometry.append({
                 "type": "circle",
                 "center": (center.x, center.y),
-                "radius": radius
+                "radius": entity.dxf.radius
             })
-
 
         elif entity.dxftype() == "ARC":
 
@@ -47,7 +60,6 @@ def parse_dxf(file_path):
                 "end_angle": entity.dxf.end_angle
             })
 
-
         elif entity.dxftype() == "LWPOLYLINE":
 
             points = []
@@ -60,6 +72,5 @@ def parse_dxf(file_path):
                 "points": points,
                 "closed": entity.closed
             })
-
 
     return geometry
