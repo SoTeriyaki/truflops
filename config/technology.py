@@ -30,9 +30,7 @@ TECH_TABLES = {
     },
 
     "AL": {  # aluminium
-        1: "al1",
-        2: "al2",
-        3: "al3",
+        5: "al5",
     }
 
 }
