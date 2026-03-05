@@ -19,12 +19,14 @@ TECH_TABLES = {
         2: "sn2",
         3: "sn3",
         4: "sn4",
+        5: "sn5",
+        6: "sn6",
+        8: "sn8",
+        10: "sn10",
     },
 
     "OC": {  # ocynk
-        1: "oc1",
         2: "oc2",
-        3: "oc3",
     },
 
     "AL": {  # aluminium
