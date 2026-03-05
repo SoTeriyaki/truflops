@@ -1,5 +1,5 @@
 import os
-from post.subprogram import generate_subprogram
+from post.subprogram import generate_toolpath
 
 
 def apply_markers(template, markers):
@@ -14,32 +14,36 @@ def apply_markers(template, markers):
     return template
 
 
-def generate_program(program_name, thickness, tech_table, date, contours, part_placements):
+def generate_program(program_name, thickness, tech_table, date, contours, part_positions):
 
     template_path = "templates/template.lst"
     output_path = "output/generated.lst"
 
-    # wczytanie template
     with open(template_path, "r", encoding="utf-8") as f:
         template = f.read()
 
-    # markery
     markers = {
+
         "PROGRAM_NAME": program_name,
         "THICKNESS": thickness,
         "DATE": date,
+
         "TECH_TABLE": tech_table,
-        "TOOLPATH": generate_subprogram(contours),
-        "PART_PLACEMENTS": part_placements
+
+        "PROGRAM_PATH": "",
+        "HTML_PATH": "",
+        "MATERIAL": "SC",
+        "SHEET_NAME": "ST004000----3000x1500",
+
+        "TOOLPATH": generate_toolpath(contours),
+
+        "PART_POSITIONS": part_positions
     }
 
-    # podmiana markerów
     program = apply_markers(template, markers)
 
-    # stworzenie folderu output jeśli nie istnieje
     os.makedirs("output", exist_ok=True)
 
-    # zapis pliku
     with open(output_path, "w", encoding="utf-8") as f:
         f.write(program)
 
