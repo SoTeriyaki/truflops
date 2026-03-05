@@ -26,17 +26,31 @@ def main():
 
     # parsowanie DXF
     geometry = parse_dxf(dxf_path)
-    generate_preview(geometry,"output/output_preview.png")
+
+    generate_preview(geometry, "output/output_preview.png")
+
     print("Wczytana geometria:")
     print(geometry)
+
+    # budowa konturów
     contours = build_contours(geometry)
+
+    # kompensacja kerf
+    contours = apply_kerf(contours)
+
+    # lead-in
     contours = apply_leads(contours)
+
     print("Contours:")
     print(contours)
+
+    # bounding box
     bbox = compute_bbox(geometry)
-    part_placements = generate_part_placements(program_name, bbox)
-    print("Bounding box:")
-    print(bbox)
+
+part_placements = generate_part_placements(program_name, bbox)
+
+print("Bounding box:")
+print(bbox)
         
     # data
     date = datetime.now().strftime("%d.%m.%Y")
