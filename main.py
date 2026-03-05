@@ -27,43 +27,43 @@ def main():
     tech_table = get_tech_table(material, thickness)
 
     # parsowanie DXF
-geometry = parse_dxf(dxf_path)
+    geometry = parse_dxf(dxf_path)
 
-print("Wczytana geometria:")
-print(geometry)
+    print("Wczytana geometria:")
+    print(geometry)
 
-# budowa konturów
-contours = build_contours(geometry)
+    # budowa konturów
+    contours = build_contours(geometry)
 
-# kolejność cięcia
-contours = apply_cut_order(contours)
+    # kolejność cięcia
+    contours = apply_cut_order(contours)
 
-# kierunek
-contours = detect_direction(contours)
+    # kierunek
+    contours = detect_direction(contours)
 
-# kerf
-contours = apply_kerf(contours)
+    # kerf
+    contours = apply_kerf(contours)
 
-# lead
-contours = apply_leads(contours)
+    # lead
+    contours = apply_leads(contours)
 
-print("Contours:")
-print(contours)
+    print("Contours:")
+    print(contours)
 
-# bounding box
-bbox = compute_bbox(geometry)
+    # bounding box
+    bbox = compute_bbox(geometry)
 
-print("Bounding box:")
-print(bbox)
+    print("Bounding box:")
+    print(bbox)
 
-# preview toolpath
-generate_preview(contours, bbox, "output/output_preview.png")
+    # preview toolpath
+    generate_preview(contours, bbox, "output/output_preview.png")
 
-# placement
-part_placements = generate_part_placements(program_name, bbox)
+    # placement
+    part_placements = generate_part_placements(program_name, bbox)
 
-# generowanie programu
-generate_program(
+    # generowanie programu
+    generate_program(
     program_name,
     thickness,
     tech_table,
