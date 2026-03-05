@@ -20,12 +20,13 @@ def generate_grid_nest(bbox, quantity):
     rows = int(usable_h // pitch_y)
 
     placements = []
-
     count = 0
 
-    for r in range(rows):
+    # NAJPIERW kolumna (X)
+    for c in range(cols):
 
-        for c in range(cols):
+        # potem w górę (Y)
+        for r in range(rows):
 
             if count >= quantity:
                 return placements
