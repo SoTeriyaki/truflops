@@ -7,6 +7,7 @@ from geometry.lead import apply_leads
 from preview.generator import generate_preview
 from geometry.bbox import compute_bbox
 from geometry.placement import generate_part_placements
+from geometry.kerf import apply_kerf
 
 import os
 from datetime import datetime
