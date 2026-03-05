@@ -529,3 +529,18 @@ DA,8,'INTERNAL_DATA',200,2,,'T','','ST045MDO-N2SO-30-2','',0
 DA,9,'INTERNAL_DATA',210,2,,'T','','PEZNE','',0
 DA,10,'INTERNAL_DATA',220,2,,'T','','NORMALNIE','',0
 DA,11,'INTERNAL_DATA',230,2,,'T','','DUZY','',0
+DA,12,'INTERNAL_DATA',103,1,,'T','','0 : 01 : 15 [h:min:s]','',0
+DA,13,'INTERNAL_DATA',102,1,,'T','','','',0
+DA,14,'INTERNAL_DATA',101,1,,'T','','0 : 01 : 15 [h:min:s]','',0
+DA,15,'INTERNAL_DATA',280,1,,'Z','mm','1958','',0
+DA,16,'INTERNAL_DATA',650,1,,'T','','TruLaser 3030 (L20)','',0
+
+* 'X:\TRUMPF\2D\Blacha #4\170260401\170260401_1.taf','','',0
+  DA,18,'INTERNAL_DATA',550,1,,'T','','Bez','',0
+  DA,19,'INTERNAL_DATA',600,1,,'T','','BMP','',0
+  DA,20,'INTERNAL_DATA',610,1,,'T','','BMP','',0
+  DA,21,'INTERNAL_DATA',660,1,,'T','','pll','',0
+  DA,22,'INTERNAL_DATA',420,1,,'T','','NOID_1','',0
+  DA,23,'INTERNAL_DATA',430,1,,'T','','','',0
+  DA,24,'INTERNAL_DATA',350,1,,'T','','SP','',0
+  DA,25,'INTERNAL_DATA',571,1,,'T','','0.62 min','',0
