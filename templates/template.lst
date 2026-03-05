@@ -440,3 +440,22 @@ DA,,'170260401_1','LO','NOID',1,0,
   MM,AT,1, 90,1,1,,'Abmessung in Y' ,,'mm',Z
   MM,AT,1, 100,1,1,,'Winkellage' ,,'deg',Z
   MM,AT,1, 150,1,1,,'X-Koordinate Schwerpunkt' ,,'mm',Z
+MM,AT,1, 160,1,1,,'Y-Koordinate Schwerpunkt' ,,'mm',Z
+MM,AT,1, 190,1,1,,'Entnahmenummer' ,,'',Z
+MM,AT,1, 200,1,1,,'Referenzteil' ,,'',Z
+MM,AT,1, 210,1,1,,'Name der PartUnloadData-Tabelle' ,,'',T
+MM,AT,1, 220,1,1,,'Name der PartPalettData-Tabelle' ,,'',T
+MM,AT,1, 240,1,1,,'Klassifizierung' ,,'',Z
+MM,AT,1, 250,1,1,,'reserviert' ,,'',T
+MM,AT,1, 320,1,1,,'Part Type Index' ,,'',Z
+MM,AT,1, 330,1,1,,'Mirrored At Y' ,,'Bool',Z
+MM,AT,1, 360,1,1,,'LabelGroupID' ,,'',Z
+MM,AT,1, 500,1,1,,'TRUMPF-Kennung' ,,'',Z
+C
+ZA,DA,2
+DA,1,'170260401_1','NOID_1',5.00,5.00,162.00,162.00,0.00,86.00,86.00,
+
+* 0,0,'','',1,'',1,0,-1,1
+  DA,2,'170260401_1','NOID_1',5.00,172.80,162.00,162.00,0.00,86.00,
+* 253.80,0,0,'','',1,'',1,0,-1,1
+  C
