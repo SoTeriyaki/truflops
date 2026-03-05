@@ -4,6 +4,7 @@ from dxf.parser import parse_dxf
 from geometry.contour import build_contours
 from geometry.lead import apply_leads
 from preview.generator import generate_preview
+from geometry.bbox import compute_bbox
 
 import os
 from datetime import datetime
