@@ -34,7 +34,7 @@ def main():
 
     # tabela technologiczna
     tech_name = get_tech_name(material, thickness)
-    tech_data = load_technology(tech_name)
+    tech_data = load_technology(tech_table)
 
     # parsowanie DXF
     geometry = parse_dxf(dxf_path)
