@@ -64,13 +64,13 @@ def main():
 
     # generowanie programu
     generate_program(
-    program_name,
-    thickness,
-    tech_table,
-    date,
-    contours,
-    part_placements
-)
+        program_name,
+        thickness,
+        tech_table,
+        datetime.now(),
+        contours,
+        part_placements
+    )
 
 
 if __name__ == "__main__":
