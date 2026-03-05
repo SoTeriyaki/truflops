@@ -544,3 +544,25 @@ DA,16,'INTERNAL_DATA',650,1,,'T','','TruLaser 3030 (L20)','',0
   DA,23,'INTERNAL_DATA',430,1,,'T','','','',0
   DA,24,'INTERNAL_DATA',350,1,,'T','','SP','',0
   DA,25,'INTERNAL_DATA',571,1,,'T','','0.62 min','',0
+DA,23,'INTERNAL_DATA',430,1,,'T','','','',0
+DA,24,'INTERNAL_DATA',350,1,,'T','','SP','',0
+DA,25,'INTERNAL_DATA',571,1,,'T','','0.62 min','',0
+DA,26,'INTERNAL_DATA',570,1,,'T','','0 : 00 : 37 [h:min:s]','',0
+DA,27,'INTERNAL_DATA',620,1,,'Z','','4098.99','PARTS_IN_PROGRAM',0
+DA,28,'INTERNAL_DATA',340,1,,'Z','','2','',0
+DA,29,'INTERNAL_DATA',370,1,,'T','','0.19','',0
+DA,30,'INTERNAL_DATA',330,1,,'Z','mm','978.999','',0
+DA,31,'INTERNAL_DATA',360,1,,'T','','SP1170260401_1','',0
+DA,32,'INTERNAL_DATA',311,1,,'T','','','',0
+
+* 'ODLEGŁOŚĆ MIĘDZY LISTWAMI PODPOROWYMI:','','',0
+  DA,33,'INTERNAL_DATA',310,1,,'T','','67 mm','',0
+  DA,34,'INTERNAL_DATA',312,1,,'T','','','',0
+* 'Maszyna standardowa, ustawiony co drugi','','',0
+  DA,35,'INTERNAL_DATA',313,1,,'T','','38 mm','',0
+  DA,36,'INTERNAL_DATA',440,1,,'Z','','199.82','',0
+  DA,37,'INTERNAL_DATA',640,1,,'Z','','167.00','',0
+  DA,38,'INTERNAL_DATA',641,1,,'Z','','334.80','',0
+  DA,39,'INTERNAL_DATA',450,1,,'T','','','',0
+* 'Kontury zaplanowane z korekcją toru','','',0
+  DA,40,'INTERNAL_DATA',590,1,,'T','','Nie ustalone','',0
