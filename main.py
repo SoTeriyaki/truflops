@@ -40,17 +40,14 @@ def main():
 
     # lead-in
     contours = apply_leads(contours)
-
     print("Contours:")
     print(contours)
 
     # bounding box
     bbox = compute_bbox(geometry)
-
-part_placements = generate_part_placements(program_name, bbox)
-
-print("Bounding box:")
-print(bbox)
+    part_placements = generate_part_placements(program_name, bbox)
+    print("Bounding box:")
+    print(bbox)
         
     # data
     date = datetime.now().strftime("%d.%m.%Y")
