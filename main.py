@@ -33,6 +33,7 @@ def main():
     print("Contours:")
     print(contours)
     bbox = compute_bbox(geometry)
+    part_placements = generate_part_placements(program_name, bbox)
     print("Bounding box:")
     print(bbox)
         
