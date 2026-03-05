@@ -62,12 +62,15 @@ def main():
     # placement
     part_placements = generate_part_placements(program_name, bbox)
 
+    # data programu
+    date = datetime.now().strftime("%d.%m.%Y")
+
     # generowanie programu
     generate_program(
         program_name,
         thickness,
         tech_table,
-        date = datetime.now().strftime("%d.%m.%Y"),
+        date,
         contours,
         part_placements
     )
