@@ -52,25 +52,25 @@ def generate_program(
 
     if dry_run:
 
-        dry_section = f"""
-N140 MSG("DRY RUN START")
+       dry_section = f"""
+    N200 MSG("DRY RUN START")
 
-N145 TC_LASER_OFF(2)
-N150 TC_POS_LEVEL(60.0)
+    N210 TC_LASER_OFF(2)
+    N220 TC_POS_LEVEL(60.0)
 
-N160 F70500
-G90
+    N230 F70500
+    G90
 
-; ===== DRY RUN START =====
-{part_positions}
-; ===== DRY RUN END =====
+    ; ===== DRY RUN START =====
+    {dry_positions}
+    ; ===== DRY RUN END =====
 
-N170 MSG("DRY RUN END")
+    N240 MSG("DRY RUN END")
 
-N180 TC_POS_LEVEL(40.0)
-N185 TC_LASER_ON
-N190 F141000
-"""
+    N250 TC_POS_LEVEL(40.0)
+    N260 TC_LASER_ON
+    N270 F141000
+    """
 
     else:
 
