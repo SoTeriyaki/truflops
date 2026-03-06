@@ -9,7 +9,7 @@ def apply_markers(template, markers):
 
         template = template.replace(
             "{" + key + "}",
-            str(value)
+            str(value).strip()
         )
 
     return template
