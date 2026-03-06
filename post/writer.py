@@ -39,29 +39,80 @@ def generate_program(
     part_center_x = part_width / 2
     part_center_y = part_height / 2
 
+    # --------------------------------
+    # TOOLPATH
+    # --------------------------------
+
+    toolpath_cut = generate_subprogram(contours)
+    toolpath_dry = generate_subprogram(contours)
+
+    # --------------------------------
+    # DRY RUN SECTION
+    # --------------------------------
+
+    if dry_run:
+
+        dry_section = f"""
+N140 TC_POS_LEVEL(60.0)
+N150 MSG("DRY RUN START")
+
+N160 F70500
+
+{toolpath_dry}
+
+N170 MSG("DRY RUN END")
+
+N180 TC_POS_LEVEL(40.0)
+N190 F141000
+"""
+
+    else:
+
+        dry_section = ""
+
+    # --------------------------------
+    # MARKERS
+    # --------------------------------
+
     markers = {
 
-    "PROGRAM_NAME": program_name,
-    "THICKNESS": thickness,
-    "DATE": date,
-    "PROGRAM_PATH": "",
-    "HTML_PATH": "",
-    "MATERIAL": material,
-    "MATERIAL_ISO": material_iso,
-    "DENSITY": density,
-    "SHEET_NAME": f"{material}{int(thickness*10):03}----3000x1500",
-    "TECH_NAME": tech_name,
-    "TECH_DATA": tech_data,
-    #"TOOLPATH": generate_subprogram(contours),
-    "PART_POSITIONS": part_positions,
-    "PART_WIDTH": f"{part_width:.3f}",
-    "PART_HEIGHT": f"{part_height:.3f}",
-    "PART_CENTER_X": f"{part_center_x:.3f}",
-    "PART_CENTER_Y": f"{part_center_y:.3f}",
+        "PROGRAM_NAME": program_name,
+        "THICKNESS": thickness,
+        "DATE": date,
 
+        "PROGRAM_PATH": "",
+        "HTML_PATH": "",
+
+        "MATERIAL": material,
+        "MATERIAL_ISO": material_iso,
+        "DENSITY": density,
+
+        "SHEET_NAME": f"{material}{int(thickness*10):03}----3000x1500",
+
+        "TECH_NAME": tech_name,
+        "TECH_DATA": tech_data,
+
+        "DRY_SECTION": dry_section,
+        "CUT_TOOLPATH": toolpath_cut,
+
+        "PART_POSITIONS": part_positions,
+
+        "PART_WIDTH": f"{part_width:.3f}",
+        "PART_HEIGHT": f"{part_height:.3f}",
+
+        "PART_CENTER_X": f"{part_center_x:.3f}",
+        "PART_CENTER_Y": f"{part_center_y:.3f}",
     }
 
+    # --------------------------------
+    # APPLY MARKERS
+    # --------------------------------
+
     program = apply_markers(template, markers)
+
+    # --------------------------------
+    # SAVE FILE
+    # --------------------------------
 
     os.makedirs("output", exist_ok=True)
 
