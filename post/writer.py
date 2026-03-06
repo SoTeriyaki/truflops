@@ -65,7 +65,7 @@ N160 F70500
 G90
 
 ; ===== DRY TOOLPATH START =====
-{toolpath_dry}
+{part_positions}
 ; ===== DRY TOOLPATH END =====
 
 N170 MSG("DRY RUN END")
