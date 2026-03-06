@@ -116,6 +116,10 @@ def generate_subprogram(contours):
 
     lines = []
 
+    # tryb absolutny
+    lines.append("G90")
+    lines.append("")
+
     for contour in contours:
 
         if contour["type"] == "circle":
