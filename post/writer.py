@@ -62,7 +62,7 @@ def generate_program(
     N200 MSG("DRY RUN START")
 
     N210 TC_LASER_OFF(2)
-    N220 TC_POS_LEVEL(60.0)
+    N220 TC_POS_LEVEL(80.0)
 
     N230 F70500
     N231 G90
