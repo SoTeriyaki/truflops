@@ -25,7 +25,7 @@ def generate_part_placements(program_name, bbox, quantity):
 
         lines.append(f"G90")
         lines.append(f"X{x:.3f} Y{y:.3f}")
-        lines.append(f"L SP1{program_name}")
+        lines.append(f"SP1{program_name}")
         lines.append("")
 
     return "\n".join(lines)
