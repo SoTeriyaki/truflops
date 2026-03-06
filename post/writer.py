@@ -46,11 +46,11 @@ def generate_program(
 
     toolpath_cut = generate_subprogram(contours)
 
-    dry_positions = ""
+    if isinstance(part_positions, str):
 
-    for line in part_positions.splitlines():
+        for line in part_positions.splitlines():
 
-        line = line.strip()
+            line = line.strip()
 
             if line.startswith("X"):
 
