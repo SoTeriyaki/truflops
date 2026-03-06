@@ -73,7 +73,7 @@ def generate_program(
     N220 TC_POS_LEVEL(80.0)
 
     N230 F70500
-    N231 G90
+    N231 G90 G00
 
     ; ===== DRY RUN START =====
     {dry_positions}
