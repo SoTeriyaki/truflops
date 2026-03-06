@@ -1,7 +1,7 @@
 TECH_TABLE = {
 
     # OCYNK
-    ("OC",2): "SS020MD0-N2SO-30-2",
+    ("OC",2): "SS020MDO-N2SO-30-2",
 
     # NIERDZEWKA
     ("SN",1): "SS010MDO-N2SO-30-2",
