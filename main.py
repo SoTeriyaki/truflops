@@ -45,8 +45,6 @@ def main():
     # AUTO ALIGN
     geometry = align_to_origin(geometry)
 
-    print("Wczytana geometria:")
-
     # budowa konturów
     contours = build_contours(geometry)
 
@@ -66,8 +64,6 @@ def main():
     bbox = compute_bbox(geometry)
     part_width = bbox["width"]
     part_height = bbox["height"]
-
-    print("Bounding box:")
 
     # grid nest
     placements = generate_grid_nest(bbox, quantity)
