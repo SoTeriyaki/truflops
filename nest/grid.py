@@ -24,9 +24,9 @@ def generate_grid_nest(bbox, quantity):
     placements = []
     count = 0
 
-    for c in range(cols):
-
-        for r in range(rows):
+    for r in range(rows):
+        
+        for c in range(cols):
 
             if count >= quantity:
                 return placements
