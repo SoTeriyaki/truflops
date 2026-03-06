@@ -46,6 +46,12 @@ def generate_program(
 
     toolpath_cut = generate_subprogram(contours)
 
+    dry_positions = ""
+
+    for line in part_positions.splitlines():
+        if line.strip().startswith("X"):
+            dry_positions += line + "\n"
+
     # --------------------------------
     # DRY RUN SECTION
     # --------------------------------
@@ -76,11 +82,6 @@ def generate_program(
 
         dry_section = ""
 
-    dry_positions = ""
-
-    for line in part_positions.splitlines():
-        if line.strip().startswith("X"):
-            dry_positions += line + "\n"
 
     # --------------------------------
     # MARKERS
