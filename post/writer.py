@@ -52,7 +52,7 @@ def generate_program(
 
         for line in part_positions.splitlines():
 
-        line = line.strip()
+            line = line.strip()
 
         if line.startswith("X"):
 
