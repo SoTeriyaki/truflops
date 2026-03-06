@@ -10,6 +10,6 @@ def write_part_positions(placements):
         y = p["y"]
 
         lines.append(f"X{x:.3f} Y{y:.3f}")
-        lines.append("L SP1test")
+        lines.append("SP1test")
 
     return "\n".join(lines)
