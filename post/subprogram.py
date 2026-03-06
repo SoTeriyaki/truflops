@@ -1,4 +1,6 @@
 import math
+
+from matplotlib import lines
 from post.pierce import generate_pierce_cycle
 
 
@@ -49,6 +51,9 @@ def generate_circle(contour):
 
     # druga połowa
     lines.append(f"{g} {format_xy(sx, sy)} I{i2:.3f} J{j2:.3f}")
+
+    # wyłączenie lasera po konturze
+    lines.append("TC_LASER_OFF(3)")
 
     return lines
 
