@@ -26,7 +26,8 @@ def generate_program(
         contours,
         part_positions,
         part_width,
-        part_height
+        part_height,
+        dry_run
     ):
 
     template_path = "templates/template.lst"
