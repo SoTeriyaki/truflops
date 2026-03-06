@@ -72,6 +72,7 @@ def generate_line(contour):
     lines.append(f"G00 {format_xy(x1, y1)}")
     lines += generate_pierce_cycle()
     lines.append(f"G01 {format_xy(x2, y2)}")
+    lines.append("TC_LASER_OFF(3)")
 
     return lines
 
