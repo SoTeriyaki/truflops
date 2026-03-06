@@ -30,6 +30,9 @@ def generate_program(
         dry_run
     ):
 
+    toolpath_cut = generate_toolpath(contours, "cut")
+    toolpath_dry = generate_toolpath(contours, "dry")
+    
     template_path = "templates/template.lst"
     output_path = "output/generated.lst"
 
