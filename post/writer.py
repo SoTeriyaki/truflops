@@ -62,9 +62,9 @@ N150 TC_POS_LEVEL(60.0)
 N160 F70500
 G90
 
-; ===== DRY TOOLPATH START =====
+; ===== DRY RUN START =====
 {part_positions}
-; ===== DRY TOOLPATH END =====
+; ===== DRY RUN END =====
 
 N170 MSG("DRY RUN END")
 
