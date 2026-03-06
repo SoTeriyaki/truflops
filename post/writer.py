@@ -74,7 +74,6 @@ def generate_program(
     N240 MSG("DRY RUN END")
 
     N250 TC_POS_LEVEL(40.0)
-    N260 TC_LASER_ON
     N270 F141000
     """
 
