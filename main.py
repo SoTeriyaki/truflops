@@ -27,6 +27,9 @@ def main():
     material = input("Material (SC/SN/OC/AL): ").upper()
     thickness = float(input("Grubosc blachy: "))
     quantity = int(input("Liczba detali: "))
+    # Dry run
+    dry_run_input = input("Czy wykonać DRY RUN przed cięciem? (y/n): ").lower()
+    dry_run = dry_run_input == "y"
     material_data = MATERIALS[material]
     material_iso = material_data["iso"]
     density = material_data["density"]
