@@ -48,7 +48,9 @@ def generate_program(
 
     dry_positions = ""
 
-    for line in part_positions.splitlines():
+    if part_positions:
+
+        for line in part_positions.splitlines():
 
         line = line.strip()
 
