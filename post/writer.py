@@ -1,5 +1,5 @@
 import os
-from post.subprogram import generate_subprogram
+
 from post.subprogram import generate_subprogram
 from post.subprogram import generate_dry_run_toolpath
 
@@ -42,11 +42,12 @@ def generate_program(
     part_center_y = part_height / 2
 
     # --------------------------------
-    # TOOLPATH
+    # TOOLPATH GENERATION
     # --------------------------------
 
     toolpath_cut = generate_subprogram(contours)
-    toolpath_dry = generate_subprogram(contours)
+
+    toolpath_dry = generate_dry_run_toolpath(contours)
 
     # --------------------------------
     # DRY RUN SECTION
@@ -55,12 +56,17 @@ def generate_program(
     if dry_run:
 
         dry_section = f"""
-N140 TC_POS_LEVEL(60.0)
-N150 MSG("DRY RUN START")
+N140 MSG("DRY RUN START")
+
+N145 TC_LASER_OFF(2)
+N150 TC_POS_LEVEL(60.0)
 
 N160 F70500
+G90
 
+; ===== DRY TOOLPATH START =====
 {toolpath_dry}
+; ===== DRY TOOLPATH END =====
 
 N170 MSG("DRY RUN END")
 
