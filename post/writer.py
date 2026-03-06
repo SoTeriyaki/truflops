@@ -47,8 +47,6 @@ def generate_program(
 
     toolpath_cut = generate_subprogram(contours)
 
-    toolpath_dry = generate_dry_run_toolpath(contours)
-
     # --------------------------------
     # DRY RUN SECTION
     # --------------------------------
