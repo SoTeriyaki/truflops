@@ -46,7 +46,6 @@ def main():
     geometry = align_to_origin(geometry)
 
     print("Wczytana geometria:")
-    print(geometry)
 
     # budowa konturów
     contours = build_contours(geometry)
@@ -63,16 +62,12 @@ def main():
     # lead
     contours = apply_leads(contours)
 
-    print("Contours:")
-    print(contours)
-
     # bounding box
     bbox = compute_bbox(geometry)
     part_width = bbox["width"]
     part_height = bbox["height"]
 
     print("Bounding box:")
-    print(bbox)
 
     # grid nest
     placements = generate_grid_nest(bbox, quantity)
