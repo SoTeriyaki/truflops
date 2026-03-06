@@ -118,6 +118,7 @@ def generate_subprogram(contours):
 
     # tryb absolutny
     lines.append("G90")
+    lines.append("F141000")
     lines.append("")
 
     for contour in contours:
