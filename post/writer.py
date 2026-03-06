@@ -49,8 +49,12 @@ def generate_program(
     dry_positions = ""
 
     for line in part_positions.splitlines():
-        if line.strip().startswith("X"):
-            dry_positions += line + "\n"
+
+        line = line.strip()
+
+            if line.startswith("X"):
+
+                dry_positions += "G00 " + line + "\n"
 
     # --------------------------------
     # DRY RUN SECTION
