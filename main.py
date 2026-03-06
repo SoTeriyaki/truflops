@@ -103,7 +103,8 @@ def main():
         contours,
         part_positions,
         part_width,
-        part_height
+        part_height,
+        dry_run
     )
 
 
