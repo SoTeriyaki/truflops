@@ -103,6 +103,7 @@ def generate_arc(contour):
     lines.append(
         f"{g} {format_xy(ex, ey)} I{i:.3f} J{j:.3f}"
     )
+    lines.append("TC_LASER_OFF(3)")
 
     return lines
 
