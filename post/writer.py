@@ -76,6 +76,12 @@ def generate_program(
 
         dry_section = ""
 
+    dry_positions = ""
+
+    for line in part_positions.splitlines():
+        if line.strip().startswith("X"):
+            dry_positions += line + "\n"
+
     # --------------------------------
     # MARKERS
     # --------------------------------
