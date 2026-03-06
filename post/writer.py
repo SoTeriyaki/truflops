@@ -52,7 +52,7 @@ def generate_program(
     "SHEET_NAME": f"{material}{int(thickness*10):03}----3000x1500",
     "TECH_NAME": tech_name,
     "TECH_DATA": tech_data,
-    "TOOLPATH": generate_subprogram(contours),
+    #"TOOLPATH": generate_subprogram(contours),
     "PART_POSITIONS": part_positions,
     "PART_WIDTH": f"{part_width:.3f}",
     "PART_HEIGHT": f"{part_height:.3f}",
