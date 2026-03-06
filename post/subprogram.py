@@ -169,5 +169,3 @@ def generate_dry_run_toolpath(contours):
         lines.append("")
 
     return "\n".join(lines)
-
-    return "\n".join(lines)
